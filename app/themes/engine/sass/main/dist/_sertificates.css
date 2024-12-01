@@ -1,0 +1,21 @@
+@media screen and (min-width: 768px) {
+  .sertificates-img img {
+    height: 300px;
+    max-width: 200px;
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .sertificates-img img {
+    height: 380px;
+    max-width: 260px;
+    min-width: 260px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sertificates-img img {
+    height: 485px;
+    max-width: 347px;
+    min-width: 347px;
+  }
+}

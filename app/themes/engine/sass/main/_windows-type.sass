@@ -1,0 +1,95 @@
+.windows-type 
+    &-btn:not(:last-of-type)
+        margin-bottom: 20px          
+    &-btn
+        background: $second
+        color: $white
+        border-radius: 50px
+    &-btn.active
+        background: $main
+    &-img
+        &-item
+            position: static
+            margin-bottom: 10px
+            margin-right: 10px
+        &-item-1
+            top: 120px
+            left: 50px       
+        &-item-2
+            top: 210px
+            left: 130px       
+        &-item-3
+            top: 150px
+            left: 450px       
+        &-item-4
+            top: 240px
+            left: 490px
+@media screen and ( min-width: 768px )
+    .windows-type        
+        &-img
+            &-item
+                position: absolute
+            &-item-1
+                top: 120px
+                left: 50px       
+            &-item-2
+                top: 210px
+                left: 130px       
+            &-item-3
+                top: 150px
+                left: 440px       
+            &-item-4
+                top: 240px
+                left: 490px  
+@media screen and ( min-width: 992px )
+    .windows-type
+        &-btn:not(:last-of-type)
+            margin-bottom: 0
+        &-btn:first-of-type
+            border-radius: 50px 0px 0px 50px
+        &-btn:last-of-type
+            border-radius: 0px 50px 50px 0px       
+        &-img
+            &-item-1
+                top: 160px
+                left: 110px       
+            &-item-2
+                top: 310px
+                left: 200px       
+            &-item-3
+                top: 180px
+                left: 620px       
+            &-item-4
+                top: 330px
+                left: 700px    
+@media screen and ( min-width: 1200px )
+    .windows-type
+        &-img
+            &-item-1
+                top: 210px
+                left: 110px       
+            &-item-2
+                top: 380px
+                left: 220px       
+            &-item-3
+                top: 210px
+                left: 740px       
+            &-item-4
+                top: 380px
+                left: 820px     
+@media screen and ( min-width: 1538px )
+    .windows-type
+        &-img
+            &-item-1
+                top: 210px
+                left: 110px       
+            &-item-2
+                top: 380px
+                left: 220px       
+            &-item-3
+                top: 210px
+                left: 820px       
+            &-item-4
+                top: 380px
+                left: 900px        
+                       

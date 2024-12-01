@@ -1,0 +1,102 @@
+.modal.fade.modal-diagnostics(data-bs-keyboard="false" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .fs-18.text-g.fw-bl Запись на диагностику 
+                button.btn-close.position-absolute.border-0.bg-transparent.p-0.m-0.d-flex(data-bs-dismiss="modal")
+                    i.icon.u_multiply
+            .modal-body
+                p Укажите контактные данные, чтобы мы могли связаться с вами и записать вас на диагностику в удобное для вас время 
+                form(name="modal-diagnostics" autocomplete="off")
+                    .d-flex.flex-column.gap-sm-20.gap-10
+                        input.input-phone.rounded-10.bg-white.px-20.py-15.border-0.fs-14.w-100(type="tel" placeholder="+7 (9__) ___-__-__" required)
+                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Оставить заявку
+.modal.fade.modal-services(data-bs-keyboard="false" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .fs-18.text-g.fw-bl Работа по ремонту переднего бампера
+                button.btn-close.position-absolute.border-0.bg-transparent.p-0.m-0.d-flex(data-bs-dismiss="modal")
+                    i.icon.u_multiply.
+            .modal-body
+                +img('images/modal.jpg', 'Работа по ремонту переднего бампера')
+                p Если вам необходима похожая услуга, укажите контактные данные, чтобы мы могли связаться с вами и записать вас в удобное для вас время.
+                form(name="modal-service" autocomplete="off")
+                    .d-flex.flex-column.gap-sm-20.gap-10
+                        input.input-phone.rounded-10.bg-white.px-20.py-15.border-0.fs-14.w-100(type="tel" placeholder="+7 (9__) ___-__-__" required)
+                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Оставить заявку
+.modal.fade.modal-promotion(data-bs-keyboard="false" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .fs-18.text-g.fw-bl Название акции
+                button.btn-close.position-absolute.border-0.bg-transparent.p-0.m-0.d-flex(data-bs-dismiss="modal")
+                    i.icon.u_multiply
+            .modal-body
+                +img('images/modal.jpg', 'Работа по ремонту переднего бампера')
+                p Если вам необходима похожая услуга, укажите контактные данные, чтобы мы могли связаться с вами и записать вас в удобное для вас время.
+                form(name="modal-promotion" autocomplete="off")
+                    .d-flex.flex-column.gap-sm-20.gap-10
+                        input.input-phone.rounded-10.bg-white.px-20.py-15.border-0.fs-14.w-100(type="tel" placeholder="+7 (9__) ___-__-__" required)
+                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Оставить заявку
+.modal.fade.modal-services-2(data-bs-keyboard="false" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .fs-18.text-g.fw-bl Замена масла в двигаеле
+                button.btn-close.position-absolute.border-0.bg-transparent.p-0.m-0.d-flex(data-bs-dismiss="modal")
+                    i.icon.u_multiply
+            .modal-body
+                +img('images/modal-2.jpg', 'Замена масла в двигаеле')
+                .d-flex.flex-column.gap-sm-20.gap-10
+                    .fs-14 Описание услуги
+                    .d-flex.flex-column.gap-2.flex-grow-1
+                        .fs-14.fw-rg.o-0_6
+                            |  Цена: 
+                            span.fw-bl.text-decoration-line-through 2 000 руб.
+                        .fs-18.fw-bl.text-g.text-uppercase 
+                            | от  
+                            span 1 500 
+                            |  руб.                           
+                p Чтобы заказать эту услугу укажите контактные данные, и мы с вами свяжемся.
+                form(name="modal-service-2" autocomplete="off")
+                    .d-flex.flex-column.gap-20
+                        input.input-phone.rounded-10.bg-white.px-20.py-15.border-0.fs-14.w-100(type="tel" placeholder="+7 (9__) ___-__-__" required)
+                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Заказать услугу
+.modal.fade.modal-article(data-bs-keyboard="false" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-lg
+        .modal-content
+            .modal-header
+                .fs-18.text-g.fw-bl Контент в модальном окне
+                button.btn-close.position-absolute.border-0.bg-transparent.p-0.m-0.d-flex(data-bs-dismiss="modal")
+                    i.icon.u_multiply
+            .modal-body
+                .content.d-flex.flex-column.gap-sm-20.gap-10                    
+                    p <a href="#">Разнообразный</a> и богатый опыт <a href="#">постоянный количественный рост</a> и сфера нашей активности способствует подготовки и реализации систем массового участия.
+                    +img('images/modal-2.jpg', 'Замена масла в двигаеле')                                           
+                    div
+                        p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, <b>соответствует насущным потребностям.</b>
+                        p Равным образом новая модель организационной деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+                button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.align-self-center(data-bs-dismiss="modal") Закрыть
+.modal.fade.modal-address(data-bs-keyboard="false" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                .fs-18.text-g.fw-bl Адреса автосервиса
+                button.btn-close.position-absolute.border-0.bg-transparent.p-0.m-0.d-flex(data-bs-dismiss="modal")
+                    i.icon.u_multiply
+            .modal-body
+                .d-flex.flex-column.gap-10
+                    each val in [{title: 'Механический цех', address: 'Барнаул, пр. Строителей, 143'}, {title: 'Кузовной цех', address: 'Барнаул, пр. Строителей, 144'}, {title: 'Корпоративным клиентам', address: 'Барнаул, пр. Строителей, 143'}]
+                        .d-flex.gap-10.align-items-start
+                            i.icon.u_map-marker-alt.fs-18.o-0_5
+                            .d-flex.flex-column
+                                .fs-sm-14.fs-12.fw-sb= val['title']
+                                .fs-sm-14.fs-12= val['address']
+                                .fs-sm-14.fs-12.o-0_6 Ежедневно с 09:00 до 20:00
+                form(name="modal-address" autocomplete="off")
+                    .d-flex.flex-column.gap-sm-20.gap-10
+                        input.input-phone.rounded-10.bg-white.px-20.py-15.border-0.fs-14.w-100(type="tel" placeholder="+7 (9__) ___-__-__" required)
+                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Оставить заявку                
+
+                

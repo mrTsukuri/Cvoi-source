@@ -1,0 +1,13 @@
+.compare-tabs .basket-tabs-btn .btn-close {
+  position: relative;
+  z-index: 1000;
+}
+.compare-tabs-content .swiper-slide.active .visible-in-active {
+  visibility: visible;
+}
+.compare-tabs-content .visible-in-active {
+  visibility: hidden;
+}
+.compare-tabs-content-table-row:not(:last-of-type) {
+  margin-bottom: 50px;
+}

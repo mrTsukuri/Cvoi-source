@@ -1,0 +1,14 @@
+.profile-tab-company img {
+  height: 40px;
+  width: auto;
+}
+.profile-tab-grid {
+  display: grid;
+  grid-template-columns: 269px 1fr;
+  gap: 80px;
+}
+.profile-tab-btn img {
+  max-width: 70px;
+  min-width: 70px;
+  height: 61px;
+}

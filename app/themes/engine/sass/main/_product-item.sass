@@ -1,0 +1,27 @@
+.product-item
+    &-top               
+        &-img
+            &::before
+                background: linear-gradient(118.43deg, rgba(242, 131, 121, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF
+                height: 100%
+            & img
+                mix-blend-mode: darken
+    &-sale
+        border-radius: 0 20px 
+.product-tabs
+    &-btn:not(:last-of-type)
+        margin-right: 20px
+    &-btn
+        border: 2px solid #FCF6F5
+        color: $black
+        & i
+            color: $main
+    &-btn.active
+        border-color: transparent
+        color: #fff
+        background: $second
+        & i
+            color: #fff           
+                       
+
+        

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="themes/engine/css/boots.css" as="style">
+    <link rel="preload" href="themes/engine/css/main.css" as="style">
+    <link rel="preload" href="themes/engine/css/libs.css" as="style">
+    <link rel="preload" href="themes/engine/fonts/Intro-Bold/Intro-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="themes/engine/fonts/Intro-Book/Intro-Book.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="themes/engine/fonts/Intro-Regular/Intro-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="themes/engine/css/boots.css">
+    <link rel="stylesheet" href="themes/engine/css/main.css">
+    <link rel="stylesheet" href="themes/engine/css/libs.css">
+    <title>Корзина покупок</title>
+  </head>
+  <body>
+    <header class="header mb-50 py-20">
+      <div class="container">
+        <div class="header-top mb-20">
+          <div class="row align-items-center g-xxl-40 g-sm-30 g-20">
+            <div class="col-auto d-none d-sm-block">
+              <div class="header-city d-flex align-items-center pointer"><i class="icon u_map-marker fs-18 me-4 text-main"></i><span class="lh-1 fw-regular fs-14">Новосибирск</span></div>
+            </div>
+            <div class="col d-none d-xxl-block">
+              <ul class="list-unstyled header-menu d-flex mb-0 text-nowrap">
+                <li><a class="fs-14 lh-1 pe-20 o-0_5 d-inline-block" href="#">Акции</a></li>
+                <li><a class="fs-14 lh-1 pe-20 o-0_5 d-inline-block" href="#">Новости</a></li>
+                <li><a class="fs-14 lh-1 pe-20 o-0_5 d-inline-block" href="contact.html">Контакты</a></li>
+                <li><a class="fs-14 lh-1 pe-20 o-0_5 d-inline-block" href="#">Адреса салонов</a></li>
+                <li><a class="fs-14 lh-1 o-0_5 d-inline-block" href="#">График приема</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="header-search">
+                <form class="position-relative">
+                  <input class="main-input px-20 py-14 w-100 fs-14 lh-1" type="text" placeholder="Поиск по сайту">
+                  <button class="btn-search position-absolute top-50 translate-middle-y p-0"><i class="u_search-alt icon fs-18 text-main"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <div class="d-flex flex-column align-items-end"><a class="fs-20 lh-1 fw-bold mb-4" href="tel:+78002220130">8 800 222-01-30</a><a class="fs-14 lh-1 o-0_5 text text-decoration-underline" href="mailto:info@alorto.ru">info@alorto.ru</a></div>
+            </div>
+            <div class="col-auto d-none d-md-block">
+              <button class="btn rounded-pill btn-empty fs-14 lh-1 px-20 py-14">Запись на прием</button>
+            </div>
+            <div class="col-auto">
+              <div class="header-login"><a class="d-flex" href="account.html"><i class="u_user icon fs-24 lh-1 me-10"></i><span class="fs-12 lh-1 fw-regular d-none d-sm-inline">Личный<br>кабинет</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bot">
+          <div class="row align-items-center g-xxl-40 g-sm-30 g-20 justify-content-between">
+            <div class="col-auto d-xxl-none"><a class="header-menuBtn d-flex" href="#mobile-menu" aria-label="mobile-btn"><span class="line position-relative"></span></a></div>
+            <div class="col-auto">
+              <div class="header-logo"><a class="d-inline-block" href="index.html"><img src="images/headerLogo.png" alt="Логотип" width="157" height="40"></a></div>
+            </div>
+            <div class="col-auto d-none d-md-block"><a class="btn rounded-pill btn-main p-20 d-flex align-items-center" href="catalog.html"><i class="u_apps icon fs-18 lh-1 text-white me-20"></i><span class="lh-1 text-white fw-bold">Каталог товаров</span></a></div>
+            <div class="col d-none d-xl-block">
+              <ul class="list-unstyled header-menu d-flex mb-0 text-nowrap">
+                <li><a class="fs-14 lh-1 pe-20 d-inline-block fw-regular" href="catalog-services.html">Услуги</a></li>
+                <li><a class="fs-14 lh-1 pe-20 d-inline-block fw-regular" href="#">Ортопедические изделия</a></li>
+                <li class="d-none d-xl-block"><a class="fs-14 lh-1 pe-20 d-inline-block fw-regular" href="#">Протезирование</a></li>
+                <li class="d-none d-xxl-block"><a class="fs-14 lh-1 d-inline-block fw-regular" href="#">Средства реабилитации</a></li>
+              </ul>
+            </div>
+            <div class="col-auto ms-sm-auto">
+              <div class="header-dopMenu d-flex rounded-pill py-sm-20 px-sm-30">
+                <div class="row g-xxl-30 g-20">
+                  <div class="col d-none d-sm-block"><a class="d-flex align-items-center" href="chosen.html">
+                      <div class="position-relative me-10"><i class="u_heart icon fs-24 lh-1"></i><span class="rounded-circle position-absolute bg-main text-white d-flex justify-content-center align-items-center border border-2 header-dopMenu-count">20 </span></div><span class="fs-14 lh-1 fw-regular d-none d-xxl-inline">Избранное                                                                     </span></a></div>
+                  <div class="col d-none d-sm-block"><a class="d-flex align-items-center" href="compare.html">
+                      <div class="position-relative me-10"><i class="u_graph-bar icon fs-24 lh-1"></i><span class="rounded-circle position-absolute bg-main text-white d-flex justify-content-center align-items-center border border-2 header-dopMenu-count">15 </span></div><span class="fs-14 lh-1 fw-regular d-none d-xxl-inline">Сравнение                                    </span></a></div>
+                  <div class="col"><a class="d-flex align-items-center" href="basket.html">
+                      <div class="position-relative me-10"><i class="u_shopping-cart icon fs-24 lh-1"></i><span class="rounded-circle position-absolute bg-main text-white d-flex justify-content-center align-items-center border border-2 header-dopMenu-count">4 </span></div><span class="fs-14 lh-1 fw-regular d-none d-xxl-inline">Корзина</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <nav class="breadcrumbs py-3 mb-50">
+          <div class="breadcrumbs-nav d-flex align-items-center pt-0 text-nowrap overflow-auto"><span><a class="breadcrumbs-nav-item position-relative fs-14 lh-1" href="index.html"><span>Главная</span></a></span><span><a class="breadcrumbs-nav-item position-relative fs-14 lh-1" href="#"><span>Внутренняя страницы</span></a></span><span><span class="breadcrumbs-nav-item breadcrumbs-nav-item-disabled text-main fs-14 lh-1">Текущая страница</span></span></div>
+        </nav>
+      </div>
+      <div class="section basket">
+        <div class="container">
+          <h1 class="fs-35 lh-1 fw-bold mb-50">Корзина покупок</h1>
+          <div class="row g-xxl-40 g-sm-30 g-20 mb-50">
+            <div class="col">
+              <div class="product-item d-flex bg-light rounded-20 overflow-hidden position-relative basket-item">
+                <div class="row g-0 flex-grow-1 align-items-md-center">
+                  <div class="col-xxl-2 col-sm-3 col-4">
+                    <div class="product-item-top position-relative p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block" href="product.html"><img class="of-unset" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a>
+                      <div class="product-item-sale px-10 py-16 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                    </div>
+                  </div>
+                  <!--.product-item-bot.p-xxl-30.p-sm-20.p-10.d-flex.flex-grow-1.align-items-xl-center.flex-column.flex-xl-row-->
+                  <div class="col">
+                    <div class="d-flex flex-column flex-grow-1 ps-xxl-30 ps-20 pe-20 pe-md-0 pt-10 pt-md-0">
+                      <div class="d-flex flex-column mb-xl-16 mb-5"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column rating mb-10 mb-xl-0"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xxl-auto col-md pe-xxl-30 pe-20 p-20 py-md-0 ps-md-0">               
+                    <div class="row g-xxl-40 g-xl-30 g-sm-20 g-10 align-items-center justify-content-between">
+                      <div class="col-xxl-auto col-md-12 col-auto">
+                        <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                        <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                          <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <div class="count-number d-flex">
+                            <button class="count-btn count-btn-min bg-main border-0 d-flex p-xl-10 p-5 rounded-start-circle"><i class="u_minus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                            <input class="p-0 border-2 border border-main px-sm-10 px-5 fs-14 lh-1 count-input" type="number" min="1" value="1" max="999">
+                            <button class="count-btn count-btn-plus bg-main border-0 d-flex p-xl-10 p-5 rounded-end-circle"><i class="u_plus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                          <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="bg-white border-0 rounded-circle position-absolute top-0 end-0 p-5 d-flex mt-10 me-10"><i class="u_multiply icon fs-18 lh-1 text-main"></i></button>
+              </div>
+              <div class="product-item d-flex bg-light rounded-20 overflow-hidden position-relative basket-item">
+                <div class="row g-0 flex-grow-1 align-items-md-center">
+                  <div class="col-xxl-2 col-sm-3 col-4">
+                    <div class="product-item-top position-relative p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block" href="product.html"><img class="of-unset" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a>
+                      <div class="product-item-sale px-10 py-16 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                    </div>
+                  </div>
+                  <!--.product-item-bot.p-xxl-30.p-sm-20.p-10.d-flex.flex-grow-1.align-items-xl-center.flex-column.flex-xl-row-->
+                  <div class="col">
+                    <div class="d-flex flex-column flex-grow-1 ps-xxl-30 ps-20 pe-20 pe-md-0 pt-10 pt-md-0">
+                      <div class="d-flex flex-column mb-xl-16 mb-5"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column rating mb-10 mb-xl-0"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xxl-auto col-md pe-xxl-30 pe-20 p-20 py-md-0 ps-md-0">               
+                    <div class="row g-xxl-40 g-xl-30 g-sm-20 g-10 align-items-center justify-content-between">
+                      <div class="col-xxl-auto col-md-12 col-auto">
+                        <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                        <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                          <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <div class="count-number d-flex">
+                            <button class="count-btn count-btn-min bg-main border-0 d-flex p-xl-10 p-5 rounded-start-circle"><i class="u_minus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                            <input class="p-0 border-2 border border-main px-sm-10 px-5 fs-14 lh-1 count-input" type="number" min="1" value="1" max="999">
+                            <button class="count-btn count-btn-plus bg-main border-0 d-flex p-xl-10 p-5 rounded-end-circle"><i class="u_plus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                          <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="bg-white border-0 rounded-circle position-absolute top-0 end-0 p-5 d-flex mt-10 me-10"><i class="u_multiply icon fs-18 lh-1 text-main"></i></button>
+              </div>
+              <div class="product-item d-flex bg-light rounded-20 overflow-hidden position-relative basket-item">
+                <div class="row g-0 flex-grow-1 align-items-md-center">
+                  <div class="col-xxl-2 col-sm-3 col-4">
+                    <div class="product-item-top position-relative p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block" href="product.html"><img class="of-unset" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a>
+                      <div class="product-item-sale px-10 py-16 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                    </div>
+                  </div>
+                  <!--.product-item-bot.p-xxl-30.p-sm-20.p-10.d-flex.flex-grow-1.align-items-xl-center.flex-column.flex-xl-row-->
+                  <div class="col">
+                    <div class="d-flex flex-column flex-grow-1 ps-xxl-30 ps-20 pe-20 pe-md-0 pt-10 pt-md-0">
+                      <div class="d-flex flex-column mb-xl-16 mb-5"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column rating mb-10 mb-xl-0"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xxl-auto col-md pe-xxl-30 pe-20 p-20 py-md-0 ps-md-0">               
+                    <div class="row g-xxl-40 g-xl-30 g-sm-20 g-10 align-items-center justify-content-between">
+                      <div class="col-xxl-auto col-md-12 col-auto">
+                        <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                        <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                          <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <div class="count-number d-flex">
+                            <button class="count-btn count-btn-min bg-main border-0 d-flex p-xl-10 p-5 rounded-start-circle"><i class="u_minus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                            <input class="p-0 border-2 border border-main px-sm-10 px-5 fs-14 lh-1 count-input" type="number" min="1" value="1" max="999">
+                            <button class="count-btn count-btn-plus bg-main border-0 d-flex p-xl-10 p-5 rounded-end-circle"><i class="u_plus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                          <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="bg-white border-0 rounded-circle position-absolute top-0 end-0 p-5 d-flex mt-10 me-10"><i class="u_multiply icon fs-18 lh-1 text-main"></i></button>
+              </div>
+              <div class="product-item d-flex bg-light rounded-20 overflow-hidden position-relative basket-item">
+                <div class="row g-0 flex-grow-1 align-items-md-center">
+                  <div class="col-xxl-2 col-sm-3 col-4">
+                    <div class="product-item-top position-relative p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block" href="product.html"><img class="of-unset" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a>
+                      <div class="product-item-sale px-10 py-16 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                    </div>
+                  </div>
+                  <!--.product-item-bot.p-xxl-30.p-sm-20.p-10.d-flex.flex-grow-1.align-items-xl-center.flex-column.flex-xl-row-->
+                  <div class="col">
+                    <div class="d-flex flex-column flex-grow-1 ps-xxl-30 ps-20 pe-20 pe-md-0 pt-10 pt-md-0">
+                      <div class="d-flex flex-column mb-xl-16 mb-5"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column rating mb-10 mb-xl-0"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xxl-auto col-md pe-xxl-30 pe-20 p-20 py-md-0 ps-md-0">               
+                    <div class="row g-xxl-40 g-xl-30 g-sm-20 g-10 align-items-center justify-content-between">
+                      <div class="col-xxl-auto col-md-12 col-auto">
+                        <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                        <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                          <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <div class="count-number d-flex">
+                            <button class="count-btn count-btn-min bg-main border-0 d-flex p-xl-10 p-5 rounded-start-circle"><i class="u_minus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                            <input class="p-0 border-2 border border-main px-sm-10 px-5 fs-14 lh-1 count-input" type="number" min="1" value="1" max="999">
+                            <button class="count-btn count-btn-plus bg-main border-0 d-flex p-xl-10 p-5 rounded-end-circle"><i class="u_plus-circle icon fs-xl-24 fs-20 lh-1 text-white"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex">
+                          <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                          <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xl-30 fs-sm-24 fs-20 lh-1"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="bg-white border-0 rounded-circle position-absolute top-0 end-0 p-5 d-flex mt-10 me-10"><i class="u_multiply icon fs-18 lh-1 text-main"></i></button>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4">
+              <div class="product-main-right-price">
+                <div class="product-main-right-price-cost bg-light rounded-20 p-10 overflow-hidden position-relative mb-10">
+                  <div class="product-main-right-price-cost-top p-xl-30 p-20">
+                    <div class="d-flex flex-column mb-20"><span class="fs-18 lh-1 fw-regular mb-10">Цена</span>
+                      <div class="d-flex flex-column"><span class="fs-18 lh-1 fw-regular o-0_5 text-decoration-line-through mb-5">5 500 рублей</span><span class="fs-30 lh-1 fw-bold text-main">5 500 рублей</span></div>
+                    </div>
+                    <button class="btn rounded-pill btn-main d-flex px-30 py-20 align-items-center w-100 justify-content-center mb-20"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Оформить заказ</span></button>
+                    <div class="d-flex flex-column">
+                      <div class="d-flex align-items-center mb-5"><i class="u_credit-card icon fs-24 lh-1 text-main me-10"></i><span class="fs-14 lh-1">Приобрести в кредит/рассрочку</span></div>
+                      <div class="d-flex align-items-center"><i class="u_check-circle icon fs-24 lh-1 text-main me-10"></i><span class="fs-14 lh-1">Забронировать и забрать в салоне</span></div>
+                    </div>
+                  </div>
+                  <div class="product-main-right-price-cost-bot p-30 content">
+                    <ul>
+                      <li><a class="fs-14 lh-1" href="#">Возврат и обмен</a></li>
+                      <li><a class="fs-14 lh-1" href="#">Нашли дешевле?</a></li>
+                      <li><a class="fs-14 lh-1" href="#">Бесплатная примерка</a></li>
+                      <li><a class="fs-14 lh-1" href="#">Доступно в магазинах</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-main-right-price-additional rounded-20 bg-light px-40 py-30">
+                  <div class="d-flex justify-content-between">
+                    <button class="bg-transparent border-0 p-0 pointer d-flex flex-column"><i class="u_truck icon fs-30 lh-1 text-main mb-5"></i><span class="fs-14 lh-1 fw-regular">Доставка<br> по России</span></button>
+                    <button class="bg-transparent border-0 p-0 pointer d-flex flex-column"><i class="u_credit-card icon fs-30 lh-1 text-main mb-5"></i><span class="fs-14 lh-1 fw-regular">Онлайн<br> оплата</span></button>
+                    <button class="bg-transparent border-0 p-0 pointer d-flex flex-column"><i class="u_pricetag-alt icon fs-30 lh-1 text-main mb-5"></i><span class="fs-14 lh-1 fw-regular">Гибкие<br> скидки</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column bg-light rounded-20 p-xxl-60 p-sm-40 p-20 mb-50">
+            <h2 class="fs-35 lh-1 fw-bold mb-30">Контактные данные</h2>
+            <div class="row">
+              <div class="col-xl-8">
+                <div class="row g-xxl-40 g-sm-30 g-20">
+                  <div class="col-md-4 col-sm-6"><span class="fs-14 lh-1 fw-regular mb-10 d-inline-block">Фамилия, имя, отчество</span>
+                    <input class="main-input fs-14 lh-1 px-20 py-16 w-100" type="text" placeholder="Фамилия Имя Отчество">
+                  </div>
+                  <div class="col-md-4 col-sm-6"><span class="fs-14 lh-1 fw-regular mb-10 d-inline-block">Номер телефона для связи</span>
+                    <input class="main-input fs-14 lh-1 px-20 py-16 w-100" type="text" placeholder="+7 (9__) ___-__-__">
+                  </div>
+                  <div class="col-md-4 col-sm-6"><span class="fs-14 lh-1 fw-regular mb-10 d-inline-block">Элекронная почта</span>
+                    <input class="main-input fs-14 lh-1 px-20 py-16 w-100" type="text" placeholder="email@email.ru">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column bg-light rounded-20 p-xxl-60 p-sm-40 p-20 mb-50">
+            <h2 class="fs-35 lh-1 fw-bold mb-30">Контактные данные</h2>
+            <div class="basket-tabs">
+              <div class="basket-tabs-btns mb-30">
+                <div class="js-tabs__nav">
+                  <div class="js-tabs__no-marker js-tabs__tabs-container d-flex d-flex overflow-auto">
+                    <div class="js-tabs__tab basket-tabs-btn product-tabs-btn rounded-pill px-md-30 px-16 py-md-20 py-10 d-flex align-items-center pointer" data-article="1"><i class="u_check-circle icon fs-sm-30 fs-20 lh-1 me-10 d-none d-sm-inline"></i><span class="lh-1 fw-regular">Доставка</span></div>
+                    <div class="js-tabs__tab basket-tabs-btn product-tabs-btn rounded-pill px-md-30 px-16 py-md-20 py-10 d-flex align-items-center pointer" data-article="2"><i class="u_check-circle icon fs-sm-30 fs-20 lh-1 me-10 d-none d-sm-inline"></i><span class="lh-1 fw-regular">Самовывоз</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-tabs-content">
+                <div class="js-tabs__content-container">
+                  <div class="js-tabs__content" data-article="1">
+                    <div class="row">
+                      <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10"><span class="fs-14 lh-1 fw-regular mb-10 d-inline-block">Укажите адрес доставки</span>
+                        <input class="main-input fs-14 lh-1 px-20 py-16 w-100" type="text" placeholder="Например: Барнаул, 34, 45">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="js-tabs__content" data-article="2">
+                    <div class="d-flex flex-column"><span class="fs-18 lh-1_5 fw-regular d-inline-block mb-10">Заберите ваш заказ самостоятельно</span>
+                      <div class="fs-18 lh-1_5 d-flex flex-column flex-sm-row"><span class="fw-regular">Адрес:</span> г. Барнаул, ул. Ленина 100</div>
+                      <div class="fs-18 lh-1_5 d-flex flex-column flex-sm-row"><span class="fw-regular">Время работы:</span> С 09:00 до 20:00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column bg-light rounded-20 p-xxl-60 p-sm-40 p-20">
+            <h2 class="fs-35 lh-1 fw-bold mb-30">Способ оплаты</h2>
+            <div class="basket-tabs">
+              <div class="basket-tabs-btns mb-30">
+                <div class="js-tabs__nav">
+                  <div class="js-tabs__no-marker js-tabs__tabs-container d-flex overflow-auto">
+                    <div class="js-tabs__tab basket-tabs-btn product-tabs-btn rounded-pill px-md-30 px-16 py-md-20 py-10 d-flex align-items-center pointer" data-article="1"><i class="u_check-circle icon fs-sm-30 fs-20 lh-1 me-10 d-none d-sm-inline"></i><span class="lh-1 fw-regular">Оплата по реквизитам</span></div>
+                    <div class="js-tabs__tab basket-tabs-btn product-tabs-btn rounded-pill px-md-30 px-16 py-md-20 py-10 d-flex align-items-center pointer" data-article="2"><i class="u_check-circle icon fs-sm-30 fs-20 lh-1 me-10 d-none d-sm-inline"></i><span class="lh-1 fw-regular">Оплатить потом</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-tabs-content">
+                <div class="js-tabs__content-container">
+                  <div class="js-tabs__content" data-article="1">
+                    <div class="row">
+                      <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10"><span class="fs-14 lh-1 fw-regular mb-10 d-inline-block">Укажите реквизиты организации</span>
+                        <input class="main-input fs-14 lh-1 px-20 py-16 w-100" type="text" placeholder="Наименование или ИНН организации">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="js-tabs__content" data-article="2">
+                    <div class="d-flex flex-column"><span class="fs-18 lh-1_5 fw-regular d-inline-block">Вы можете оплатить товар при получении в салоне, или курьеру наличным и безналичным расчетом.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="popular">
+        <div class="container">
+          <div class="heading-slider d-flex mb-40 justify-content-between flex-wrap">
+            <h2 class="fs-35 lh-1 fw-bold">Не забудьте также</h2>
+            <div class="slider-pagination-4 d-flex" data-category="1">
+              <div class="slider-prev rounded-circle me-10 p-10"><i class="u_arrow-right icon fs-30 lh-1"></i></div>
+              <div class="slider-next rounded-circle p-10"><i class="u_arrow-right icon fs-30 lh-1"></i></div>
+            </div>
+          </div>
+          <div class="body-slider">
+            <div class="swiper-container slider-4" data-category="1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-2.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-3.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-4.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-2.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-3.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-4.png" alt="П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="viewed">
+        <div class="container">
+          <div class="heading-slider d-flex mb-40 justify-content-between flex-wrap">
+            <h2 class="fs-35 lh-1 fw-bold">Просмотренные товары</h2>
+            <div class="slider-pagination-4 d-flex" data-category="4">
+              <div class="slider-prev rounded-circle me-10 p-10"><i class="u_arrow-right icon fs-30 lh-1"></i></div>
+              <div class="slider-next rounded-circle p-10"><i class="u_arrow-right icon fs-30 lh-1"></i></div>
+            </div>
+          </div>
+          <div class="body-slider">
+            <div class="swiper-container slider-4" data-category="4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-2.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-3.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-4.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-1.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-2.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-3.png" alt="П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                  <div class="product-item d-flex flex-column bg-light rounded-20 overflow-hidden h-100 position-relative">
+                    <div class="product-item-top p-5"><a class="ratio ratio-4x3 rounded-20 overflow-hidden product-item-top-img d-block h-100" href="product.html"><img class="of-contain" src="images/product/product-4.png" alt="П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит"></a></div>
+                    <div class="product-item-bot p-xxl-30 p-sm-20 p-10 pt-sm-20 d-flex flex-column flex-grow-1">
+                      <div class="d-flex flex-column mb-sm-20 mb-10 flex-grow-1"><span class="fs-12 lh-1 o-0_5 mb-5">Ортопедическая обувь</span><a class="lh-1 fw-regular" href="product.html">П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит П/ф (обувь детская) 43397-5 графит</a></div>
+                      <div class="d-flex flex-column">
+                        <div class="row g-xxl-40 g-20 mb-10">
+                          <div class="col-auto">
+                            <div class="d-flex"><span class="fs-12 lh-1 o-0_5 me-5">Цена:</span><span class="fs-12 lh-1 o-0_5 text-main">185 000 р.</span></div>
+                            <div class="d-flex align-items-end"><span class="fs-18 lh-1 text-main fw-bold me-5">179 000</span>
+                              <soan class="fs-14 lh-1 text-main fw-bold">руб.</soan>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="d-flex flex-column rating"><span class="fs-12 lh-1 o-0_5">Рейтинг:</span><select class="star-rating" disabled>
+<option value="">Select a rating</option>
+<option value="5">Excellent</option>
+<option value="4" selected>Very Good</option>
+<option value="3">Average</option>
+<option value="2">Poor</option>
+<option value="1">Terrible</option>
+</select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-20 align-items-center">
+                          <div class="col">
+                            <button class="btn rounded-pill btn-main d-flex px-xxl-30 px-20 py-xxl-20 py-10 align-items-center w-100 justify-content-center"><i class="u_shopping-cart icon fs-24 lh-1 text-white me-10"></i><span class="lh-1 text-white fw-regular">Купить</span></button>
+                          </div>
+                          <div class="col-auto d-none d-md-block">
+                            <div class="d-flex">
+                              <button class="bg-transparent border-0 p-0 d-flex h-100 me-16"><i class="u_graph-bar icon fs-xxl-30 fs-24 lh-1"></i></button>
+                              <button class="bg-transparent border-0 p-0 d-flex h-100"><i class="u_heart icon fs-xxl-30 fs-24 lh-1"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-sale px-md-16 px-10 py-md-20 py-10 bg-main position-absolute top-0 end-0 fs-14 lh-1 fw-bold text-white">-5%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer py-50 text-white">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row g-xxl-40 g-sm-30 g-20 align-items-center">
+            <div class="col-auto">
+              <div class="footer-logo"><a class="d-inline-block" href="index.html"><img src="images/footerLogo.png" alt="Логотип" width="157" height="40"></a></div>
+            </div>
+            <div class="col d-none d-xxl-block">
+              <ul class="list-unstyled footer-menu d-flex mb-0 text-nowrap">
+                <li><a class="fs-14 lh-1 pe-20 d-inline-block fw-regular" href="catalog-services.html">Услуги</a></li>
+                <li><a class="fs-14 lh-1 pe-20 d-inline-block fw-regular" href="#">Ортопедические изделия</a></li>
+                <li><a class="fs-14 lh-1 pe-20 d-inline-block fw-regular" href="#">Протезирование</a></li>
+                <li><a class="fs-14 lh-1 d-inline-block fw-regular" href="#">Средства реабилитации</a></li>
+              </ul>
+            </div>
+            <div class="col-md-auto ms-md-auto">
+              <div class="row g-xxl-40 g-sm-30 g-20 justify-content-between">
+                <div class="col-auto">
+                  <div class="d-flex flex-column align-items-end"><a class="fs-lg-20 lh-1 fw-bold mb-4" href="mailto:info@alorto.ru">info@alorto.ru</a>
+                    <button class="fs-14 lh-1 o-0_5 text text-decoration-underline bg-transparent border-0 text-white">Написать нам</button>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="d-flex flex-column align-items-end"><a class="fs-lg-20 lh-1 fw-bold mb-4" href="tel:+78002220130">8 800 222-01-30</a>
+                    <button class="fs-14 lh-1 o-0_5 text text-decoration-underline bg-transparent border-0 text-white">Обратный звонок</button>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <button class="btn rounded-pill btn-empty fs-14 lh-1 px-20 py-14 text-white">Запись на прием</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-40">
+        <div class="footer-mid">
+          <div class="row g-xxl-40 g-sm-30 g-20">
+            <div class="col-lg-3 col-sm-6"><span class="fs-18 lh-1 fw-bold mb-30 d-inline-block">Меню</span>
+              <ul class="list-unstyled m-0 d-flex flex-column">
+                <li class="mb-20"><a class="lh-1" href="#">Акции</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">Новости</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">Адреса магазинов</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">График приема</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">Как подготовиться к протезированию</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">Как бесплатно получить протез</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6"><span class="fs-18 lh-1 fw-bold mb-30 d-inline-block">О компании</span>
+              <ul class="list-unstyled m-0 d-flex flex-column">
+                <li class="mb-20"><a class="lh-1" href="#">Наши вакансии</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">Правовая информация</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">Договор оферты</a></li>
+                <li class="mb-20"><a class="lh-1" href="contact.html">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6"><span class="fs-18 lh-1 fw-bold mb-30 d-inline-block">Юридическая информация</span>
+              <ul class="list-unstyled m-0 d-flex flex-column">
+                <li class="mb-20"><a class="lh-1" href="#">ООО АлОрто</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">годы основания</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">копирайт</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">юридическое название</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">ИНН</a></li>
+                <li class="mb-20"><a class="lh-1" href="#">ОГРН</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6"><span class="fs-18 lh-1 fw-bold mb-30 d-inline-block">Адреса филиалов в <span class="text-main text-decoration-underline">г. Барнаул</span></span>
+              <ul class="list-unstyled m-0 d-flex flex-column">
+                <li class="mb-20">
+                  <div class="d-flex flex-column"><span class="lh-1 d-inline-block mb-10">Медицинский центр на ул. Пушкина, 38</span><a class="lh-1 fw-regular" href="tel:+73852502717">8 (3852) 50-27-17</a></div>
+                </li>
+                <li class="mb-20">
+                  <div class="d-flex flex-column"><span class="lh-1 d-inline-block mb-10">Салон на ул. Балтийская, 2</span><a class="lh-1 fw-regular" href="tel:+73852507654">8 (3852) 50-76-54</a></div>
+                </li>
+                <li class="mb-20">
+                  <div class="d-flex flex-column"><span class="lh-1 d-inline-block mb-10">Салон на ул. Ляпидевского, 1/3</span><a class="lh-1 fw-regular" href="tel:+79132603202">8 (913) 260-32-02</a></div>
+                </li>
+                <li class="mb-20">
+                  <div class="d-flex flex-column"><span class="lh-1 d-inline-block mb-10">Салон на ул. Змеиногорский тракт, 36е</span><a class="lh-1 fw-regular" href="tel:+79061965391">8 (906) 196-53-91</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative">
+          <hr class="my-40">
+          <div class="position-absolute scroll-top p-10 rounded-circle start-50 top-50 translate-middle pointer"><i class="u_arrow-right icon fs-40"></i></div>
+        </div>
+        <div class="footer-bot">
+          <p class="fs-14 lh-base o-0_5">Отправляя свои личные данные через формы на сайте, Вы даёте своё согласие на обработку персональных данных согласно Федеральному закону №152-ФЗ «О персональных данных» от 27.07.2006 г. Посещая сайт компании «АлОрто», вы соглашаетесь с <a href="#" class="text-decoration-underline text-main">Правилами и условиями использования</a> и <a href="#" class="text-decoration-underline text-main">политикой обработки персональных данных</a> данного сайта. Права на тексты, фотографии, изображения и иные результаты интеллектуальной деятельности, расположенные на сайте alorto.ru, подлежат правовой охране в соответствии с действующим законодательством РФ, Гражданским кодексом РФ (часть четвертая) от 18.12.2006 № 230-ФЗ.</p>
+        </div>
+      </div>
+    </footer>
+    <nav class="mobile-menu menu-scrolling" id="mobile-menu" style="display: none">
+      <ul>
+        <li><a class="fw-regular" href="catalog.html">Каталог товаров </a></li>
+        <li><a class="fw-regular" href="catalog-services.html">Услуги</a></li>
+        <li><a class="fw-regular" href="#">Ортопедические изделия</a></li>
+        <li><a class="fw-regular" href="#">Протезирование</a></li>
+        <li><a class="fw-regular" href="#">Средства реабилитации       </a></li>
+        <li><a class="fw-regular" href="#">Акции</a></li>
+        <li><a class="fw-regular" href="#">Новости</a></li>
+        <li><a class="fw-regular" href="contact.html">Контакты</a></li>
+        <li><a class="fw-regular" href="#">Адреса салонов</a></li>
+        <li><a class="fw-regular" href="#">График приема</a></li>
+        <li class="mobile-menu-feedback"><a class="d-flex align-items-center mb-20" href="chosen.html">
+                                          <i class="u_heart icon fs-24 lh-1 me-10"></i>                    <span class="fs-14 lh-1 fw-regular p-0">Избранное</span><span class="header-dopMenu-count position-static p-0 ms-10 fs-14">20 </span></a><a class="d-flex align-items-center mb-20" href="compare.html">
+                           <i class="u_graph-bar icon fs-24 lh-1 me-10"></i>                    <span class="fs-14 lh-1 fw-regular p-0">Сравнение</span><span class="header-dopMenu-count position-static p-0 ms-10 fs-14">15</span></a>
+          <div class="header-city d-flex align-items-center pointer"><i class="icon u_map-marker fs-24 lh-1 me-10"></i><span class="lh-1 fw-regular fs-14 p-0">Новосибирск                  </span></div>
+        </li>
+        <li class="mobile-menu-feedback">
+          <div class="d-flex flex-column mb-20">                      <a class="fs-20 lh-1 fw-bold mb-4" href="tel:+78002220130">8 800 222-01-30</a><a class="lh-1 o-0_5 text text-decoration-underline" href="mailto:info@alorto.ru">info@alorto.ru</a></div>
+          <button class="btn rounded-pill btn-empty fs-14 lh-1 px-20 py-14">Запись на прием</button>
+        </li>
+      </ul>
+    </nav><script src="https://api-maps.yandex.ru/1.1/index.xml?loadByRequire=1" type="text/javascript"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="themes/engine/js/main.bundle.js"></script>
+    <script src="themes/engine/js/mask.bundle.js"></script>
+  </body>
+</html>

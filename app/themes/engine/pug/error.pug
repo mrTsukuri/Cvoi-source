@@ -1,0 +1,23 @@
+extends template/main
+
+block variables
+    -var title = "Ошибка 404"
+block content
+    +breadcrumbs
+    section.error
+        .container
+            .d-flex.flex-column.gap-20
+                .baner-main.bg-grey.rounded-10
+                    .baner-main-left.p-xxl-70.p-xl-30.p-20.d-flex.flex-column.gap-sm-30.gap-10.align-items-start.order-1.order-lg-0
+                        .d-flex.flex-column.gap-15.align-items-start
+                            .bg-white.rounded-pill.px-sm-15.py-sm-10.px-10.py-5.text-uppercase.fs-sm-12.fs-10.fw-sb.o-0_6 Ошибка 404
+                            h1.fs-xl-50.fs-lg-40.fs-sm-30.fs-18.lh-0_9.fw-bk.mb-0 <span class='text-g'>Страница</span> <br class='d-none d-lg-inline'> не найдена
+                            p.fs-lg-18.fs-sm-16.fs-12.o-0_6 Воспользуйтесь поиском <br> или перейдите в каталог товаров
+                        form(name='baner-form' autocomplete='off').d-flex.input-block.w-100.mw-100
+                            label.border-main.position-relative.main-input.bg-white.rounded-start-10.flex-grow-1
+                                input(type='tel' placeholder='+7 (9__) ___-__-__' required).w-100.h-100.px-sm-30.px-20.py-sm-20.py-15.rounded-10.fs-sm-14.fs-10.border-0.bg-transparent.input-phone
+                                span.border-main-br
+                            button.border-0.bg-main_g.px-xxl-30.px-20.py-sm-20.py-15.fs-sm-14.fs-10.fw-bl.text-white.text-uppercase.lh-1.flex-grow-1 Сообщить об ошибке
+                    .baner-main-right.p-10.d-flex.position-relative
+                        .ratio.ratio-16x9.rounded-5.h-100.overflow-hidden
+                            img(src="images/baners-img/404.jpg", alt="Страница не найдена")

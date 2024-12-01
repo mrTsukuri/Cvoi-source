@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="themes/engine/css/boots.css" as="style">
+    <link rel="preload" href="themes/engine/css/main.css" as="style">
+    <link rel="preload" href="themes/engine/css/libs.css" as="style"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">        
+    <link rel="stylesheet" href="themes/engine/css/boots.css">
+    <link rel="stylesheet" href="themes/engine/css/main.css">
+    <link rel="stylesheet" href="themes/engine/css/libs.css">
+    <title>Услуги автосервиса</title>
+  </head>
+  <body>
+    <header class="header pt-xl-40 mb-20 overflow-hidden">  
+      <div class="header-top py-sm-30 py-15">
+        <div class="container">
+          <div class="row gx-xxl-30 gx-20 justify-content-between align-items-center">
+            <div class="col-auto"><a class="d-block header-logo" href="index.html"><img src="images/logo.svg" alt="Автосервис Свой" width="128" height="50"></a></div>
+            <div class="col-auto d-none d-xl-block">
+              <div class="row g-30">
+                <div class="col-auto">
+                  <div class="d-flex gap-5 align-items-baseline"><i class="icon u_map-marker-alt fs-12 o-0_5"></i>
+                    <div class="d-flex flex-column">
+                      <div class="fs-12 fw-sb">Сервис на Строителей, 143</div>
+                      <div class="fs-12 o-0_5">Ежедневно с 09:00 до 20:00</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="d-flex gap-5 align-items-baseline"><i class="icon u_map-marker-alt fs-12 o-0_5"></i>
+                    <div class="d-flex flex-column">
+                      <div class="fs-12 fw-sb">Сервис на Пушкина, 48</div>
+                      <div class="fs-12 o-0_5">Пн-Пт с 9:00 до 18:00</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="d-flex gap-5 align-items-baseline"><i class="icon u_map-marker-alt fs-12 o-0_5"></i>
+                    <div class="d-flex flex-column">
+                      <div class="fs-12 fw-sb">Кузовной ремонт на Строителей, 144</div>
+                      <div class="fs-12 o-0_5">Пн-Пт с 9:00 до 19:00, Сб с 9:00 до 15:00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto d-none d-xxl-block"><a class="fs-12 o-0_5 text-decoration-underline" href="#">Мобильное<br> приложение</a></div>
+            <div class="col-auto d-lg-block d-none">
+              <div class="d-flex p-10 rounded-10 bg-grey gap-10 header-social"><a class="d-block" href="#"><img src="images/vk.svg" alt="Ссылка на Вконтакт" width="20" height="20"></a><a class="d-block" href="#"><img src="images/wa.svg" alt="Ссылка на WhatsApp" width="20" height="20"></a><a class="d-block" href="#"><img src="images/tg.svg" alt="Ссылка на Telegram" width="20" height="20"></a>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="d-flex flex-column align-items-end"><a class="fw-bl fs-12 fs-sm-14 fs-md-16" href="tel:+73852722222">+7 (3852) 72-22-22</a><a class="fs-10 fs-sm-12 o-0_6" href="mailto:service@auto22.pro">service@auto22.pro</a></div>
+            </div>
+            <div class="col-auto d-xl-none">
+              <button class="border-0 bg-transparent p-0 d-flex" data-bs-toggle="modal" data-bs-target=".modal-address"><i class="icon fs-24 u_map-marker-question text-main"></i></button>
+            </div>
+            <div class="col-auto d-xl-none"><a class="d-flex" href="#mobile-menu"><i class="icon fs-30 u_bars text-main">         </i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bot bg-grey bg-sm-transparent">
+        <div class="container">
+          <div class="bg-grey rounded-10 p-md-30 p-sm-15 py-15">
+            <div class="row gx-xxl-60 gx-sm-30 gx-20 align-items-center justify-content-between flex-nowrap">
+              <div class="col-auto d-lg-none">
+                <div class="d-flex gap-10 header-social"><a class="d-block" href="#"><img src="images/vk.svg" alt="Ссылка на Вконтакт" width="20" height="20"></a><a class="d-block" href="#"><img src="images/wa.svg" alt="Ссылка на WhatsApp" width="20" height="20"></a><a class="d-block" href="#"><img src="images/tg.svg" alt="Ссылка на Telegram" width="20" height="20"></a>
+                </div>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <div class="header-dropMenu px-25 py-15 border-main position-relative bg-white"><span class="border-main-br"></span>
+                  <div class="row gx-20">
+                    <div class="col-auto">
+                      <div class="dropdawn position-relative">                                       <a class="d-flex dropdawn-btn align-items-center gap-2" href="#" title="Диагностика"><span class="fs-14 fw-sb">Диагностика</span><i class="icon u_angle-right fs-14"></i></a>
+                        <div class="dropdawn-menu px-35 py-30 rounded-10 bg-grey position-absolute">
+                          <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-10">
+                            <li><a href="#" title="Замена технических жидкостей">Замена технических жидкостей</a></li>
+                            <li><a href="#" title="Замена фильтров">Замена фильтров</a></li>
+                            <li><a href="#" title="Регламентные работы">Регламентные работы</a></li>
+                            <li><a href="#" title="Обслуживание тормозной системы">Обслуживание тормозной системы</a></li>
+                            <li><a href="#" title="Промывка инжекторов">Промывка инжекторов</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdawn position-relative">                                       <a class="d-flex dropdawn-btn align-items-center gap-2" href="#" title="Техобслуживание"><span class="fs-14 fw-sb">Техобслуживание</span><i class="icon u_angle-right fs-14"></i></a>
+                        <div class="dropdawn-menu px-35 py-30 rounded-10 bg-grey position-absolute">
+                          <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-10">
+                            <li><a href="#" title="Замена технических жидкостей">Замена технических жидкостей</a></li>
+                            <li><a href="#" title="Замена фильтров">Замена фильтров</a></li>
+                            <li><a href="#" title="Регламентные работы">Регламентные работы</a></li>
+                            <li><a href="#" title="Обслуживание тормозной системы">Обслуживание тормозной системы</a></li>
+                            <li><a href="#" title="Промывка инжекторов">Промывка инжекторов</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdawn position-relative">                                       <a class="d-flex dropdawn-btn align-items-center gap-2" href="#" title="Ремонт"><span class="fs-14 fw-sb">Ремонт</span><i class="icon u_angle-right fs-14"></i></a>
+                        <div class="dropdawn-menu px-35 py-30 rounded-10 bg-grey position-absolute">
+                          <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-10">
+                            <li><a href="#" title="Замена технических жидкостей">Замена технических жидкостей</a></li>
+                            <li><a href="#" title="Замена фильтров">Замена фильтров</a></li>
+                            <li><a href="#" title="Регламентные работы">Регламентные работы</a></li>
+                            <li><a href="#" title="Обслуживание тормозной системы">Обслуживание тормозной системы</a></li>
+                            <li><a href="#" title="Промывка инжекторов">Промывка инжекторов</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdawn position-relative">                                       <a class="d-flex dropdawn-btn align-items-center gap-2" href="#" title="Кузовной ремонт"><span class="fs-14 fw-sb">Кузовной ремонт</span><i class="icon u_angle-right fs-14"></i></a>
+                        <div class="dropdawn-menu px-35 py-30 rounded-10 bg-grey position-absolute">
+                          <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-10">
+                            <li><a href="#" title="Замена технических жидкостей">Замена технических жидкостей</a></li>
+                            <li><a href="#" title="Замена фильтров">Замена фильтров</a></li>
+                            <li><a href="#" title="Регламентные работы">Регламентные работы</a></li>
+                            <li><a href="#" title="Обслуживание тормозной системы">Обслуживание тормозной системы</a></li>
+                            <li><a href="#" title="Промывка инжекторов">Промывка инжекторов</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="dropdawn position-relative">                                       <a class="d-flex dropdawn-btn align-items-center gap-2" href="#" title="Прочее"><span class="fs-14 fw-sb">Прочее</span><i class="icon u_angle-right fs-14"></i></a>
+                        <div class="dropdawn-menu px-35 py-30 rounded-10 bg-grey position-absolute">
+                          <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-10">
+                            <li><a href="#" title="Замена технических жидкостей">Замена технических жидкостей</a></li>
+                            <li><a href="#" title="Замена фильтров">Замена фильтров</a></li>
+                            <li><a href="#" title="Регламентные работы">Регламентные работы</a></li>
+                            <li><a href="#" title="Обслуживание тормозной системы">Обслуживание тормозной системы</a></li>
+                            <li><a href="#" title="Промывка инжекторов">Промывка инжекторов</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto d-none d-xxl-block">
+                <div class="d-flex gap-15"><a class="fs-14" href="#">О сервисе</a><a class="fs-14" href="#">Услуги</a><a class="fs-14" href="#">Гарантии</a><a class="fs-14" href="#">Отзывы</a><a class="fs-14" href="#">Контакты</a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button class="border-main position-relative px-sm-15 px-12 py-sm-12 py-10 fw-bl fs-12 lh-1_25 border-0 text-uppercase" data-bs-toggle="modal" data-bs-target=".modal-address"><span class="border-main-br"></span><span>Запись в сервис</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="breadcrumbs py-md-20 mb-20">
+          <div class="breadcrumbs-nav d-flex align-items-center text-nowrap overflow-auto gap-5"><a class="d-flex align-items-center gap-5" href="#"><span class="fs-12 lh-1_25 o-0_7">Главная</span><i class="icon u_angle-right fs-14 o-0_5"></i></a><a class="d-flex align-items-center gap-5" href="#"><span class="fs-12 lh-1_25 o-0_7">Услуги</span><i class="icon u_angle-right fs-14 o-0_5"></i></a><span class="fs-12 lh-1_25">Услуга        </span>
+          </div>
+        </div>
+      </div>
+      <section class="service">
+        <div class="container">
+          <h2 class="fs-lg-30 fs-sm-20 fs-18 fw-bl text-g mb-lg-30 mb-sm-20 mb-10">Услуги автосервиса</h2>
+          <div class="row g-sm-20 g-10">
+            <div class="col-20 col-md-4 col-6 flex-grow-1"><a class="service-item rounded-10 overflow-hidden position-relative bg-grey d-block" href="#"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/service/service-1.jpg" alt="Диагностика">
+                <div class="service-item-name position-absolute bottom-0 start-0 rounded-5 bg-white px-10 py-sm-8 p-5 mb-sm-10 ms-sm-10 mb-5 ms-5 fs-sm-14 fs-12 fw-sb">Диагностика</div></a></div>
+            <div class="col-20 col-md-4 col-6 flex-grow-1"><a class="service-item rounded-10 overflow-hidden position-relative bg-grey d-block" href="#"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/service/service-2.jpg" alt="Техобслуживание">
+                <div class="service-item-name position-absolute bottom-0 start-0 rounded-5 bg-white px-10 py-sm-8 p-5 mb-sm-10 ms-sm-10 mb-5 ms-5 fs-sm-14 fs-12 fw-sb">Техобслуживание</div></a></div>
+            <div class="col-20 col-md-4 col-6 flex-grow-1"><a class="service-item rounded-10 overflow-hidden position-relative bg-grey d-block" href="#"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/service/service-3.jpg" alt="Ремонт">
+                <div class="service-item-name position-absolute bottom-0 start-0 rounded-5 bg-white px-10 py-sm-8 p-5 mb-sm-10 ms-sm-10 mb-5 ms-5 fs-sm-14 fs-12 fw-sb">Ремонт</div></a></div>
+            <div class="col-20 col-md-4 col-6 flex-grow-1"><a class="service-item rounded-10 overflow-hidden position-relative bg-grey d-block" href="#"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/service/service-4.jpg" alt="Кузовной ремонт">
+                <div class="service-item-name position-absolute bottom-0 start-0 rounded-5 bg-white px-10 py-sm-8 p-5 mb-sm-10 ms-sm-10 mb-5 ms-5 fs-sm-14 fs-12 fw-sb">Кузовной ремонт</div></a></div>
+            <div class="col-20 col-md-4 col-6 flex-grow-1"><a class="service-item rounded-10 overflow-hidden position-relative bg-grey d-block" href="#"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/service/service-5.jpg" alt="Прочее">
+                <div class="service-item-name position-absolute bottom-0 start-0 rounded-5 bg-white px-10 py-sm-8 p-5 mb-sm-10 ms-sm-10 mb-5 ms-5 fs-sm-14 fs-12 fw-sb">Прочее</div></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="steps">
+        <div class="container">
+          <h2 class="fs-lg-30 fs-sm-20 fs-18 fw-bl text-g mb-lg-30 mb-20">Порядок работы</h2>
+          <div class="row g-xxl-20 g-10 flex-nowrap flex-sm-wrap overflow-auto">
+            <div class="col-lg col-sm-6 col-auto d-flex">
+              <div class="steps-item rounded-10 bg-grey d-flex flex-column gap-sm-20 gap-10 p-lg-30 p-20 flex-grow-1">
+                <div class="d-flex flex-column gap-5">
+                  <div class="fs-sm-18 fs-12 fw-bl text-uppercase text-g">Шаг 1</div>
+                  <div class="fs-sm-14 fs-12">Вы оставляете заявку</div>
+                </div>
+                <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white w-100">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="col-auto align-self-center d-xl-block d-sm-none d-block">
+              <div class="rounded-10 bg-grey p-5 d-flex"><i class="icon fs-30 text-main u_angle-right"></i></div>
+            </div>
+            <div class="col-lg col-sm-6 col-auto d-flex">
+              <div class="steps-item rounded-10 bg-grey d-flex flex-column gap-sm-20 gap-10 p-lg-30 p-20 flex-grow-1">
+                <div class="d-flex flex-column gap-5">
+                  <div class="fs-sm-18 fs-12 fw-bl text-uppercase text-g">Шаг 2</div>
+                  <div class="fs-sm-14 fs-12">Мы перезваниваем вам в ближайшее рабочее время по указанному номеру телефона</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto align-self-center d-xl-block d-sm-none d-block">
+              <div class="rounded-10 bg-grey p-5 d-flex"><i class="icon fs-30 text-main u_angle-right"></i></div>
+            </div>
+            <div class="col-lg col-sm-6 col-auto d-flex">
+              <div class="steps-item rounded-10 bg-grey d-flex flex-column gap-sm-20 gap-10 p-lg-30 p-20 flex-grow-1">
+                <div class="d-flex flex-column gap-5">
+                  <div class="fs-sm-18 fs-12 fw-bl text-uppercase text-g">Шаг 3</div>
+                  <div class="fs-sm-14 fs-12">Мы записываем вас на услугу на удобное вам время</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto align-self-center d-xl-block d-sm-none d-block">
+              <div class="rounded-10 bg-grey p-5 d-flex"><i class="icon fs-30 text-main u_angle-right"></i></div>
+            </div>
+            <div class="col-lg col-sm-6 col-auto d-flex">
+              <div class="steps-item rounded-10 bg-grey d-flex flex-column gap-sm-20 gap-10 p-lg-30 p-20 flex-grow-1">
+                <div class="d-flex flex-column gap-5">
+                  <div class="fs-sm-18 fs-12 fw-bl text-uppercase text-g">Шаг 4</div>
+                  <div class="fs-sm-14 fs-12">Наши специалисты выполняют необходиму работу, а вы производите оплату</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="booking overflow-hidden">
+        <div class="container">
+          <h2 class="fs-lg-30 fs-sm-20 fs-18 fw-bl text-g mb-lg-30 mb-20">Запишитесь онлайн</h2>
+          <div class="row g-xxl-30 g-md-20 g-10 flex-nowrap flex-md-wrap overflow-auto">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-auto d-flex">
+              <div class="booking-item pointer rounded-10 d-flex flex-column bg-grey overflow-hidden flex-grow-1">
+                <div class="booking-item-img pop-service-item-img ratio"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/booking/booking-1.jpg" alt="Записаться на ремонт">
+                </div>
+                <div class="d-flex justify-content-center p-xl-30 p-20 bg-main_g flex-grow-1">
+                  <div class="fs-12 lh-1_25 fw-bl text-uppercase text-white">Записаться на ремонт</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-auto d-flex">
+              <div class="booking-item pointer rounded-10 d-flex flex-column bg-grey overflow-hidden flex-grow-1">
+                <div class="booking-item-img pop-service-item-img ratio"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/booking/booking-2.jpg" alt="Записаться на обслуживание">
+                </div>
+                <div class="d-flex justify-content-center p-xl-30 p-20 bg-main_g flex-grow-1">
+                  <div class="fs-12 lh-1_25 fw-bl text-uppercase text-white">Записаться на обслуживание</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-auto d-flex">
+              <div class="booking-item pointer rounded-10 d-flex flex-column bg-grey overflow-hidden flex-grow-1">
+                <div class="booking-item-img pop-service-item-img ratio"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/booking/booking-3.jpg" alt="Записаться на диагностику">
+                </div>
+                <div class="d-flex justify-content-center p-xl-30 p-20 bg-main_g flex-grow-1">
+                  <div class="fs-12 lh-1_25 fw-bl text-uppercase text-white">Записаться на диагностику</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-auto d-flex">
+              <div class="booking-item pointer rounded-10 d-flex flex-column bg-grey overflow-hidden flex-grow-1">
+                <div class="booking-item-img pop-service-item-img ratio"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/booking/booking-4.jpg" alt="Записаться на консультацию">
+                </div>
+                <div class="d-flex justify-content-center p-xl-30 p-20 bg-main_g flex-grow-1">
+                  <div class="fs-12 lh-1_25 fw-bl text-uppercase text-white">Записаться на консультацию</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="seo">
+        <div class="container">
+          <div class="rounded-10 bg-grey p-xxl-60 p-lg-50 p-md-40 p-20 content">
+            <h2 class="fs-lg-30 fs-sm-20 fs-18 fw-bl text-g">SEO текст</h2>
+            <p>Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</p>
+            <p>Таким образом консультация с широким активом требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что рамки и место обучения кадров требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что укрепление и развитие структуры требуют от нас анализа форм развития. Товарищи! дальнейшее развитие различных форм деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития. Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+            <p>Задача организации, в особенности же укрепление и развитие структуры требуют определения и уточнения соответствующий условий активизации. С другой стороны постоянный количественный рост и сфера нашей активности требуют определения и уточнения модели развития.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer py-lg-70 py-md-50 py-20 bg-grey">
+      <div class="container">
+        <div class="footer-top rounded-10 bg-white p-md-30 p-20 mb-md-40 mb-20">
+          <div class="row g-xl-30 g-20 justify-content-between align-items-center">
+            <div class="col-auto"><a class="d-block footer-logo" href="index.html"><img src="images/logo.svg" alt="Автосервис Свой" width="128" height="50"></a></div>
+            <div class="col-md-auto">
+              <div class="row g-md-10 g-5">
+                <div class="col-md-auto"><a class="fs-12 lh-1_25 o-0_6" href="#">О сервисе</a></div>
+                <div class="col-md-auto"><a class="fs-12 lh-1_25 o-0_6" href="#">Услуги</a></div>
+                <div class="col-md-auto"><a class="fs-12 lh-1_25 o-0_6" href="#">Гарантии</a></div>
+                <div class="col-md-auto"><a class="fs-12 lh-1_25 o-0_6" href="#">Отзывы</a></div>
+                <div class="col-md-auto"><a class="fs-12 lh-1_25 o-0_6" href="#">Контакты</a></div>
+              </div>
+            </div>
+            <div class="col-md-auto">                   
+              <div class="d-flex gap-10 header-social"><a class="d-block" href="#"><img src="images/vk.svg" alt="Ссылка на Вконтакт" width="20" height="20"></a><a class="d-block" href="#"><img src="images/wa.svg" alt="Ссылка на WhatsApp" width="20" height="20"></a><a class="d-block" href="#"><img src="images/tg.svg" alt="Ссылка на Telegram" width="20" height="20"></a>
+              </div>
+            </div>
+            <div class="col-xl-auto">
+              <div class="row g-20 justify-content-between">
+                <div class="col-md-auto">
+                  <div class="d-flex flex-column align-items-md-end"><a class="fw-bl" href="tel:+73852723723">+7 (3852) 72-37-23</a><a class="fs-12 o-0_6" href="mailto:director@auto22.pro">director@auto22.pro</a></div>
+                </div>
+                <div class="col-md-auto">
+                  <button class="border-main position-relative px-15 py-12 fw-rg fs-12 lh-1_25 border-0"><span class="border-main-br"></span><span>Запись на диагностику</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-mid mb-md-40 mb-20">
+          <div class="row g-30">
+            <div class="col-xxl-5 col-lg-4 col-md-6">
+              <div class="d-flex flex-column gap-30">
+                <div class="d-flex flex-column flex-xl-row gap-xl-30 gap-md-10 gap-5">
+                  <ul class="list-unstyled m-0 p-0">
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Слесарный ремонт</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Техобслуживание</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Диагностика</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Покраска</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Кондиционеры и отопление</a></li>
+                  </ul>
+                  <ul class="list-unstyled m-0 p-0">
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Кузовной ремонт</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Дополнительное оборудование</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Шиномонтаж</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">ОСАГО (терминал самообслуживания)</a></li>
+                    <li><a class="fs-sm-14 fs-12 o-0_7" href="#">Техосмотр с картой диагностики</a></li>
+                  </ul>
+                </div>
+                <div class="d-flex flex-column gap-20">
+                  <div class="fs-13 lh-1_2 fw-sb d-none d-xl-block">Твой исправный автомобиль в <span class='text-decoration-underline'>мобильном приложении</span> <span class="text-main">Автосервис «СВОЙ»</span></div>
+                  <div class="d-flex gap-20"><a class="d-block footer-mid-store" href="#"><img class="w-auto" src="images/AppStore.png" alt="AppStore" width="230" height="65"></a><a class="d-block footer-mid-store" href="#"><img class="w-auto" src="images/GooglePlay.png" alt="GooglePlay" width="230" height="65"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6">
+              <div class="d-flex flex-column gap-30">
+                <div class="d-flex flex-column gap-lg-20 gap-10">
+                  <div class="d-flex gap-10 align-items-start"><i class="icon u_map-marker-alt fs-18 o-0_5"></i>
+                    <div class="d-flex flex-column">
+                      <div class="fs-sm-14 fs-12 fw-sb">Механический цех</div>
+                      <div class="fs-sm-14 fs-12">Барнаул, пр. Строителей, 143</div>
+                      <div class="fs-sm-14 fs-12 o-0_6">Ежедневно с 09:00 до 20:00 </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-10 align-items-start"><i class="icon u_map-marker-alt fs-18 o-0_5"></i>
+                    <div class="d-flex flex-column">
+                      <div class="fs-sm-14 fs-12 fw-sb">Кузовной цех</div>
+                      <div class="fs-sm-14 fs-12">Барнаул, пр. Строителей, 144</div>
+                      <div class="fs-sm-14 fs-12 o-0_6">Ежедневно с 09:00 до 20:00 </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-10 align-items-start"><i class="icon u_map-marker-alt fs-18 o-0_5"></i>
+                    <div class="d-flex flex-column">
+                      <div class="fs-sm-14 fs-12 fw-sb">Корпоративным клиентам</div>
+                      <div class="fs-sm-14 fs-12">Барнаул, пр. Строителей, 143</div>
+                      <div class="fs-sm-14 fs-12 o-0_6">Ежедневно с 09:00 до 20:00 </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex gap-5 align-items-center footer-mid-payment"><img class="w-auto" src="images/maestro.png" alt="maestro" width="77" height="45"><img class="w-auto" src="images/paypal.png" alt="paypal" width="77" height="45"><img class="w-auto" src="images/visa.png" alt="visa" width="77" height="45"><img class="w-auto" src="images/mastercard.png" alt="mastercard" width="77" height="45">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="d-flex flex-column gap-20 p-xl-30 p-20 bg-white rounded-10">
+                <div class="fs-14 fw-sb">Запишитесь на консультацию или услугу</div>
+                <form class="d-flex flex-column gap-10" name="footer-form" autocomplete="off">
+                  <input class="input-phone rounded-10 bg-grey px-sm-30 px-20 py-sm-20 py-15 border-0 fs-sm-14 fs-12 w-100" type="tel" placeholder="+7 (9__) ___-__-__" required>
+                  <div class="custom-select">
+                    <select>
+                      <option>Диагностика</option>
+                      <option>Техобслуживание</option>
+                      <option>Слесарный ремонт</option>
+                      <option>Покраска</option>
+                      <option>Кондиционеры и отопление</option>
+                    </select>
+                  </div>
+                  <button class="rounded-10 bg-main_g px-sm-30 py-sm-20 px-20 py-15 border-0 fs-sm-14 fs-12 fw-bl text-uppercase text-white w-100">Оставить заявку</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bot content">
+          <p class="o-0_5">Отправляя свои личные данные через формы на сайте, Вы даёте своё согласие на обработку персональных данных согласно Федеральному закону №152-ФЗ «О персональных данных» от 27.07.2006 г. Посещая сайт компании «СВОЙ», вы соглашаетесь с <a href="#" class="text-decoration-underline">Правилами и условиями использования</a> и <a href="#" class="text-decoration-underline">политикой обработки персональных данных</a> данного сайта.</p>
+          <p class="o-0_5">Права на тексты, фотографии, изображения и иные результаты интеллектуальной деятельности, расположенные на сайте auto22.ru, подлежат правовой охране в соответствии с действующим законодательством РФ, Гражданским кодексом РФ (часть четвертая) от 18.12.2006 № 230-ФЗ. </p>
+        </div>
+      </div>
+    </footer>
+    <nav class="mobile-menu menu-scrolling" id="mobile-menu" style="display: none">
+      <ul>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#discount">Преимущества</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#about">О компании</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#spec">Поставка</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#instruction">Партнёрам</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#profile-tab">Профили «СИАЛ»</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#sertificates">Сертификаты</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#furnityra">Фурнитура</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#works">Примеры работ</a></li>
+        <li class="d-flex"><a class="fw-rg fs-18 w-100" href="#letters">Отзывы</a></li>
+        <li class="mobile-menu-feedback">
+          <div class="d-flex"><span class="fw-rg text-start p-0">г. Усть-Каменогорск, Пр. Нурсултана Назарбаева, 41/1, оф. 205</span></div>
+        </li>
+        <li class="mobile-menu-feedback">
+          <div class="d-flex flex-column mb-20"><a class="fs-20 fw-bl mb-5" href="tel:+78000040134">8 800 004-01-34</a><span class="p-0">Телефон в России</span></div>
+        </li>
+      </ul>
+    </nav><div aria-live="polite" aria-atomic="true">
+<div class="toast-container position-fixed top-0 end-0 p-3 js_toast_container" style="z-index: 10000;"> 
+</div>
+</div>               
+    <div class="modal fade modal-diagnostics" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="fs-18 text-g fw-bl">Запись на диагностику </div>
+            <button class="btn-close position-absolute border-0 bg-transparent p-0 m-0 d-flex" data-bs-dismiss="modal"><i class="icon u_multiply"></i></button>
+          </div>
+          <div class="modal-body">
+            <p>Укажите контактные данные, чтобы мы могли связаться с вами и записать вас на диагностику в удобное для вас время </p>
+            <form name="modal-diagnostics" autocomplete="off">
+              <div class="d-flex flex-column gap-20">
+                <input class="input-phone rounded-10 bg-white px-20 py-15 border-0 fs-14 w-100" type="tel" placeholder="+7 (9__) ___-__-__" required>
+                <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white w-100">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal-services" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="fs-18 text-g fw-bl">Работа по ремонту переднего бампера</div>
+            <button class="btn-close position-absolute border-0 bg-transparent p-0 m-0 d-flex" data-bs-dismiss="modal"><i class="icon u_multiply"></i></button>
+          </div>
+          <div class="modal-body"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/modal.jpg" alt="Работа по ремонту переднего бампера">
+            <p>Если вам необходима похожая услуга, укажите контактные данные, чтобы мы могли связаться с вами и записать вас в удобное для вас время.</p>
+            <form name="modal-service" autocomplete="off">
+              <div class="d-flex flex-column gap-20">
+                <input class="input-phone rounded-10 bg-white px-20 py-15 border-0 fs-14 w-100" type="tel" placeholder="+7 (9__) ___-__-__" required>
+                <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white w-100">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal-promotion" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="fs-18 text-g fw-bl">Название акции</div>
+            <button class="btn-close position-absolute border-0 bg-transparent p-0 m-0 d-flex" data-bs-dismiss="modal"><i class="icon u_multiply"></i></button>
+          </div>
+          <div class="modal-body"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/modal.jpg" alt="Работа по ремонту переднего бампера">
+            <p>Если вам необходима похожая услуга, укажите контактные данные, чтобы мы могли связаться с вами и записать вас в удобное для вас время.</p>
+            <form name="modal-promotion" autocomplete="off">
+              <div class="d-flex flex-column gap-20">
+                <input class="input-phone rounded-10 bg-white px-20 py-15 border-0 fs-14 w-100" type="tel" placeholder="+7 (9__) ___-__-__" required>
+                <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white w-100">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal-services-2" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="fs-18 text-g fw-bl">Замена масла в двигаеле</div>
+            <button class="btn-close position-absolute border-0 bg-transparent p-0 m-0 d-flex" data-bs-dismiss="modal"><i class="icon u_multiply"></i></button>
+          </div>
+          <div class="modal-body"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/modal-2.jpg" alt="Замена масла в двигаеле">
+            <div class="d-flex flex-column gap-20">
+              <div class="fs-14">Описание услуги</div>
+              <div class="d-flex flex-column gap-2 flex-grow-1">
+                <div class="fs-14 fw-rg o-0_6"> Цена: <span class="fw-bl text-decoration-line-through">2 000 руб.</span></div>
+                <div class="fs-18 fw-bl text-g text-uppercase">
+                   от  <span>1 500 </span> руб.                           </div>
+              </div>
+            </div>
+            <p>Чтобы заказать эту услугу укажите контактные данные, и мы с вами свяжемся.</p>
+            <form name="modal-service-2" autocomplete="off">
+              <div class="d-flex flex-column gap-20">
+                <input class="input-phone rounded-10 bg-white px-20 py-15 border-0 fs-14 w-100" type="tel" placeholder="+7 (9__) ___-__-__" required>
+                <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white w-100">Заказать услугу</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal-article" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="fs-18 text-g fw-bl">Контент в модальном окне</div>
+            <button class="btn-close position-absolute border-0 bg-transparent p-0 m-0 d-flex" data-bs-dismiss="modal"><i class="icon u_multiply"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="content d-flex flex-column gap-20">                   
+              <p><a href="#">Разнообразный</a> и богатый опыт <a href="#">постоянный количественный рост</a> и сфера нашей активности способствует подготовки и реализации систем массового участия.</p><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/modal-2.jpg" alt="Замена масла в двигаеле">
+              <div>
+                <p>Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, <b>соответствует насущным потребностям.</b></p>
+                <p>Равным образом новая модель организационной деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.</p>
+              </div>
+            </div>
+            <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white align-self-center" data-bs-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal-address" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="fs-18 text-g fw-bl">Адреса автосервиса</div>
+            <button class="btn-close position-absolute border-0 bg-transparent p-0 m-0 d-flex" data-bs-dismiss="modal"><i class="icon u_multiply"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column gap-10">
+              <div class="d-flex gap-10 align-items-start"><i class="icon u_map-marker-alt fs-18 o-0_5"></i>
+                <div class="d-flex flex-column">
+                  <div class="fs-sm-14 fs-12 fw-sb">Механический цех</div>
+                  <div class="fs-sm-14 fs-12">Барнаул, пр. Строителей, 143</div>
+                  <div class="fs-sm-14 fs-12 o-0_6">Ежедневно с 09:00 до 20:00</div>
+                </div>
+              </div>
+              <div class="d-flex gap-10 align-items-start"><i class="icon u_map-marker-alt fs-18 o-0_5"></i>
+                <div class="d-flex flex-column">
+                  <div class="fs-sm-14 fs-12 fw-sb">Кузовной цех</div>
+                  <div class="fs-sm-14 fs-12">Барнаул, пр. Строителей, 144</div>
+                  <div class="fs-sm-14 fs-12 o-0_6">Ежедневно с 09:00 до 20:00</div>
+                </div>
+              </div>
+              <div class="d-flex gap-10 align-items-start"><i class="icon u_map-marker-alt fs-18 o-0_5"></i>
+                <div class="d-flex flex-column">
+                  <div class="fs-sm-14 fs-12 fw-sb">Корпоративным клиентам</div>
+                  <div class="fs-sm-14 fs-12">Барнаул, пр. Строителей, 143</div>
+                  <div class="fs-sm-14 fs-12 o-0_6">Ежедневно с 09:00 до 20:00</div>
+                </div>
+              </div>
+            </div>
+            <form name="modal-address" autocomplete="off">
+              <div class="d-flex flex-column gap-20">
+                <input class="input-phone rounded-10 bg-white px-20 py-15 border-0 fs-14 w-100" type="tel" placeholder="+7 (9__) ___-__-__" required>
+                <button class="rounded-10 bg-main_g px-20 py-15 border-0 fs-12 lh-1_25 fw-bl text-uppercase text-white w-100">Оставить заявку                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="themes/engine/js/yall.bundle.js">       </script>
+    <script defer src="themes/engine/js/main.bundle.js"></script>
+    <script defer src="themes/engine/js/slider.bundle.js">       </script>
+    <script defer src="themes/engine/js/gallery.bundle.js"></script>
+    <script defer src="https://api-maps.yandex.ru/1.1/index.xml?loadByRequire=1" type="text/javascript">               </script>
+  </body>
+</html>

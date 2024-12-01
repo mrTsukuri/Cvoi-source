@@ -1,0 +1,61 @@
+extends template/main
+
+block variables
+    -var title = "Контакты"
+block content
+    +breadcrumbs
+    section.contact
+        .container
+            h1.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20 Контакты
+            .row.g-xxl-30.g-sm-20.g-10.mb-lg-30.mb-sm-20.mb-10
+                .col-xxl-7.col-xl-8.d-flex
+                    .d-flex.flex-column.gap-10.flex-grow-1
+                        .row.g-10
+                            -
+                                let contactArr = [
+                                                    {title: 'Офис', tel: '+7 (3852) 72-37-23', address: 'Барнаул, пр. Строителей, 143', timeWork: 'Ежедневно с 09:00 до 20:00', x: '53.339468', y: '83.742047', category: '1'},
+                                                    {title: 'Кузовной цех', tel: '+7 (3852) 72-37-23', address: 'Барнаул, пр. Строителей, 144', timeWork: 'Ежедневно с 09:00 до 20:00', x: '53.338989', y: '83.741598', category: '2'},
+                                                    {title: 'Механический цех', tel: '+7 (3852) 72-37-23', address: 'Пушкина, 48Б', timeWork: 'Ежедневно с 09:00 до 20:00', x: '53.332994', y: '83.791265', category: '3'}
+                                                ]
+                            each val in contactArr 
+                                .col-lg-4
+                                    .map-address.js_office_coordinates.contact-block-address-item.d-flex.flex-column.border.border-2.border-grey.rounded-10.p-xxl-20.p-15.gap-sm-10.gap-5.pointer(data-latitude= val['x'] data-longitude= val['y'] data-category= val['category'])
+                                        .d-flex.flex-column
+                                            .fs-sm-14.fs-12.fw-sb= val['title']
+                                            .fs-sm-14.fs-12.fw-sb.text-uppercase= val['tel']
+                                        .d-flex.flex-column
+                                            .fs-sm-14.fs-12= val['address']
+                                            .fs-sm-14.fs-12.o-0_5= val['timeWork']
+                        .contact-block-map.flex-grow-1.rounded-10.border.border-2.border-grey.overflow-hidden
+                            #YaMaps.h-100                       
+                .col-xxl-5.col-xl-4
+                    .contact-img.ratio.overflow-hidden.rounded-10
+                        +img('images/about.jpg', 'Контакты')
+            .row.g-xl-60.g-sm-20.g-10
+                .col-xl-auto.col-lg-7
+                    .d-flex.flex-column.gap-10
+                        .fs-xl-16.fs-sm-14.fs-12.lh-1_25.fw-bl Наши реквизиты
+                        .d-flex.flex-column.flex-sm-row.gap-xl-30.gap-sm-20.gap-10
+                            each val in [{title: 'Полное название', value: 'ООО Автосервис «СВОЙ»'}, {title: 'ИНН', value: '220500107230'}, {title: 'ОГРНИП', value: '305222230800102'}]
+                                .d-flex.flex-column
+                                    .fs-xl-16.fs-sm-14.fs-12.lh-1_5.o-0_7= val['title']
+                                    .fs-xl-16.fs-sm-14.fs-12.lh-1_5.fw-rg= val['value']
+                .col-xl-auto.col-lg-5
+                    .d-flex.flex-column.gap-10
+                        .fs-xl-16.fs-sm-14.fs-12.lh-1_25.fw-bl Принимаем наличную и безналичную оплату
+                        .d-flex.gap-10
+                            each val in ['maestro', 'visa', 'mastercard']
+                                .contact-payment.rounded-10.bg-grey.px-10
+                                    img(src="images/"+val+".png", alt= val).mbm-darken
+    .section
+        .container
+            .row.g-sm-20.g-15.flex-nowrap.overflow-auto
+                each val in [{title: '10 лет', desc: 'опыта'}, {title: '50 000', desc: 'постоянных клиентов'}, {title: '24 месяца', desc: 'гарантии на все работы'}, {title: 'свой склад', desc: 'запчастей'}]
+                    .col-lg-3.col-auto
+                        .baner-info-item.rounded-10.bg-grey.p-xxl-40.p-xl-30.px-20.py-15.d-flex.flex-column.justify-content-center.gap-lg-10.gap-sm-5
+                            .fs-xl-24.fs-sm-20.fs-18.fw-bk.text-uppercase.text-g= val['title']
+                            .fs-sm-14.fs-12.fw-rg= val['desc']
+    +booking
+    +advantages
+    +reviews                                                                
+

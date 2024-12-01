@@ -1,0 +1,24 @@
+.characteristic              
+    &-line
+        &::before
+            content: ""
+            position: absolute
+            width: 100%
+            border-bottom: 1px solid $black
+            opacity: .2
+            top: 50%                
+            transform: translateY(-50%)
+        & span
+            z-index: 1
+            line-height: .8          
+        & > span:first-of-type span
+            padding-right: 10px
+            color: rgba(41, 50, 64, .6)
+        & > span:last-of-type
+            text-align: end
+            & span
+                padding-left: 10px                        
+        & span span
+            box-decoration-break: clone
+            background: $white                    
+                        

@@ -1,0 +1,49 @@
+.content div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.content p, .content ul, .content ol {
+  line-height: 1.6;
+  opacity: 0.7;
+}
+.content p:not(:last-child), .content ul:not(:last-child), .content ol:not(:last-child) {
+  margin-bottom: 10px;
+}
+.content h2:not(:last-child) {
+  margin-bottom: 30px;
+}
+.content ul, .content ol {
+  padding: 0;
+  list-style: none;
+}
+.content ul li, .content ol li {
+  display: flex;
+  position: relative;
+  padding-left: 15px;
+}
+.content ul li a, .content ol li a {
+  border-bottom: 1px solid currentColor;
+}
+.content ul {
+  padding-left: 10px;
+}
+.content ul li::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 100%;
+  left: 0;
+  top: 11px;
+}
+.content ol {
+  padding-left: 4px;
+}
+.content ol li {
+  counter-increment: list;
+}
+.content ol li::before {
+  content: counter(list) ".";
+  position: absolute;
+  left: 0;
+}

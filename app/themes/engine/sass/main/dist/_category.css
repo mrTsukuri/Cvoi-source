@@ -1,0 +1,66 @@
+.category-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "head" "img" "str" "list" "desc" "advantages";
+  gap: 20px;
+}
+.category-grid.noList {
+  grid-template-areas: "head" "img" "str" "desc" "advantages";
+}
+.category-head {
+  grid-area: head;
+}
+.category-str {
+  grid-area: str;
+}
+.category-list {
+  grid-area: list;
+}
+.category-desc {
+  grid-area: desc;
+}
+.category-img {
+  grid-area: img;
+}
+.category-img .ratio {
+  aspect-ratio: 21/9;
+}
+.category-advantages {
+  grid-area: advantages;
+}
+.category-advantages-item.min {
+  width: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+    grid-template-areas: "head head" "str img" "desc img" "advantages advantages";
+  }
+  .category-grid.noList {
+    grid-template-areas: "head head" "str img" "desc img" "advantages advantages";
+  }
+  .category-img .ratio {
+    aspect-ratio: 3/2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .category-grid {
+    grid-template-areas: "head img" "str img" "desc img" "advantages advantages";
+  }
+  .category-grid.noList {
+    grid-template-areas: "head img" "str img" "desc img" "advantages advantages";
+  }
+}
+@media screen and (min-width: 1440px) {
+  .category-grid {
+    grid-template-areas: "head img" "str img" "desc img" "advantages img";
+  }
+  .category-grid.noList {
+    grid-template-areas: "head img" "str img" "desc img" "advantages img";
+  }
+  .category-advantages-item.min {
+    width: 150px;
+  }
+}

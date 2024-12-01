@@ -1,0 +1,23 @@
+.map-address
+    border: 2px solid #F28379
+    border-radius: 15px
+    min-width: 270px
+.map-address:not(:last-of-type)    
+    margin-right: 10px
+.map-address.active
+    border-color: transparent
+    background: $second
+    & i
+        color: #fff
+
+@media screen and ( min-width: 992px )
+    .map-address
+        min-width: 270px
+    .map-address:not(:last-of-type)
+        margin-bottom: 10px
+        margin-right: 0
+@media screen and ( min-width: 1200px )
+    .map-address
+        min-width: 325px
+                      
+                     

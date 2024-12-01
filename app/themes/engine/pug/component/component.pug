@@ -1,0 +1,241 @@
+-let start = ""
+
+mixin img(dataSrc, alt, width)
+    if width
+        img.lazy(src = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==", data-src= start + dataSrc, alt= alt, class!=attributes.class, width!=attributes.width, height!=attributes.height style=`max-width: ${width}px`)
+    else
+        img.lazy(src = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==", data-src= start + dataSrc, alt= alt, class!=attributes.class, width!=attributes.width, height!=attributes.height)
+//- mixin line(array)
+//-     each val in array        
+//-         .characteristic-line.d-flex.justify-content-between.align-items-center.position-relative
+//-             span
+//-                 span.fs-lg-14.fs-12!= val['first']
+//-             span                
+//-                 span.fs-lg-14.fs-12.text-end!= val['last']
+                       
+//- mixin choosing-tabs-btn(num)
+//-     button.btn.lh-1.border-0.p-0.text-start.choosing-tabs-btn.d-flex.align-items-center.pointer.rounded-pill.d-flex.align-items-center.fw-bl.text-white.w-100.pe-20.text-nowrap.text-xl-wrap(data-article= num)
+//-         .rounded-circle.border.border-5.border-white.p-15.fs-24.num.d-flex.align-items-center.justify-content-center.me-20.position-relative= num
+//-         block
+//- mixin choosing-tabs-item-block(heading, name, type, req, imgH = false, imgU)
+//-     label.choosing-tabs-item-block.w-100.rounded-20.overflow-hidden.d-flex.flex-column.position-relative
+//-         if req
+//-             input.position-absolute.w-100.h-100.start-0.top-0(type= type, name= name, required, class!=attributes.class)
+//-         else
+//-             input.position-absolute.w-100.h-100.start-0.top-0(type= type, name= name, class!=attributes.class)
+//-         if imgH
+//-             span.choosing-tabs-item-block-container.d-flex.flex-column.pointer.flex-grow-1.position-relative
+//-                 <i class="u_arrow-up-right icon text-g mb-10 align-self-end fs-30 position-absolute top-0 end-0 mt-10 me-10"></i>
+//-                 span.d-flex.flex-column.px-lg-30.px-20.pb-lg-30.pb-20.pt-lg-20.pt-10
+//-                     span.ratio.ratio-1x1.mb-20
+//-                         img(src="images/choosing/" +imgU, alt= type).rounded-10.of-contain
+//-                     span.fw-bl.fs-18.mb-10= heading
+//-                     block
+//-         else
+//-             span.choosing-tabs-item-block-container.d-flex.flex-column.pointer.flex-grow-1.position-relative.p-10
+//-                 <i class="u_arrow-up-right icon text-g mb-10 align-self-end fs-30 "></i>
+//-                 span.d-flex.flex-column.px-lg-30.px-20.pb-lg-30.pb-20.pt-lg-20.pt-10
+//-                     span.fw-bl.fs-18.mb-10= heading
+//-                     block
+//- mixin advantages-item
+//-     .advantages-item.rounded-20.p-xl-50.p-sm-30.p-20.flex-grow-1
+//-         block
+//- mixin product-tabs-item(type, company, num)
+//-         .product-tabs-item.p-xxl-50.p-md-30.p-sm-20.p-10.bg-second_g
+//-             .product-tabs-item-gallery
+//-                 .product-slide-thumbs.swiper-container(data-category= num).order-1.order-xl-0.w-100.d-none.d-xl-block.rounded-20
+//-                     .swiper-wrapper
+//-                         .swiper-slide
+//-                             .ratio.ratio-2x3
+//-                                 img(src="images/"+type+"/"+type+"-1.png", alt="Продукция и модификации" loading="lazy").of-contain
+//-                         .swiper-slide
+//-                             .ratio.ratio-2x3
+//-                                 img(src="images/"+type+"/"+type+"-1.png", alt="Продукция и модификации" loading="lazy").of-contain
+//-                         .swiper-slide
+//-                             .ratio.ratio-2x3
+//-                                 img(src="images/"+type+"/"+type+"-1.png", alt="Продукция и модификации" loading="lazy").of-contain
+//-                 .position-relative.bg-white.p-30.rounded-20.oveflow-hidden.d-flex.align-items-center
+//-                     .product-slide-prev.position-absolute.p-10.d-flex.start-0.ps-xxl-50.ps-30.top-50.translate-middle-y.pointer(data-category= num)
+//-                         <i class="u_angle-right-b icon fs-30"></i>
+//-                     .product-slide.swiper-container.mx-xxl-50.mx-30.flex-grow-1.h-100(data-category= num)
+//-                         .swiper-wrapper
+//-                             .swiper-slide
+//-                                 .ratio.ratio-2x3
+//-                                     img(src="images/"+type+"/"+type+"-1.png", alt="Продукция и модификации" loading="lazy").of-contain
+//-                             .swiper-slide
+//-                                 .ratio.ratio-2x3
+//-                                     img(src="images/"+type+"/"+type+"-1.png", alt="Продукция и модификации" loading="lazy").of-contain
+//-                             .swiper-slide
+//-                                 .ratio.ratio-2x3
+//-                                     img(src="images/"+type+"/"+type+"-1.png", alt="Продукция и модификации" loading="lazy").of-contain
+//-                     .product-slide-next.position-absolute.p-10.d-flex.end-0.pe-xxl-50.pe-30.top-50.translate-middle-y.pointer(data-category= num)
+//-                         <i class="u_angle-right-b icon fs-30"></i>
+//-             .product-desc
+//-                 .row.g-xxl-40.g-30.align-items-center.mb-40
+//-                     .col-xxl-3.col-md-4.col-6
+//-                         .rounded-20.p-xxl-30.p-20.bg-white
+//-                             .ratio.ratio-16x9
+//-                                 img(src="images/company/"+company+".png", alt="Компания" loading="lazy").of-contain
+//-                     .col-md
+//-                         .fs-24.lh-1_3.fw-bl.mb-10 Немецкое качество премиум сегмента
+//-                         p.o-1.lh-1_3 Работаем со всеми профильными системами компании KBE и являемся их официальным представителем.
+//-                 .product-des-tags
+//-                     .row.g-0
+//-                         .col-10
+//-                             .row.g-20
+//-                                 .col-auto
+//-                                     .prodcut-tab.bg-white.px-xl-20.py-xl-15.px-10.py-10.fs-xl-18.lh-1_3.fw-rg.rounded-15 Долговечность
+//-                                 .col-auto
+//-                                     .prodcut-tab.bg-white.px-xl-20.py-xl-15.px-10.py-10.fs-xl-18.lh-1_3.fw-rg.rounded-15 Энергоэффективность
+//-                                 .col-auto
+//-                                     .prodcut-tab.bg-white.px-xl-20.py-xl-15.px-10.py-10.fs-xl-18.lh-1_3.fw-rg.rounded-15 Широкий ассортимент
+//-                                 .col-auto
+//-                                     .prodcut-tab.bg-white.px-xl-20.py-xl-15.px-10.py-10.fs-xl-18.lh-1_3.fw-rg.rounded-15 Эстетика
+//-                                 .col-auto
+//-                                     .prodcut-tab.bg-white.px-xl-20.py-xl-15.px-10.py-10.fs-xl-18.lh-1_3.fw-rg.rounded-15 Профессионализм
+//- mixin solutions-item(img, name)
+//-     .rounded-20.bg-second_g.p-10.flex-grow-1
+//-         .row.g-10
+//-             .col-sm-12.col-4
+//-                 .ratio.ratio-4x3.rounded-10.overflow-hidden.mb-10
+//-                     img(src="images/1px.png" data-src="images/solutions/solutions-"+img+".jpg" alt= name loading="lazy").lazy
+//-             .col-sm-12.col-8
+//-                 .p-lg-20.p-10.flex-grow-1
+//-                     block
+//- mixin questions-item(question)
+//-     .questions-item.spoiler.rounded-20.overflow-hidden.border-main.position-relative(style="--r:20px")
+//-         .questions-item-btn.p-md-40.p-20.position-relative.spoiler-btn.pointer
+//-             .position-relative.pe-md-40.pe-20
+//-                 .d-flex.flex-column
+//-                     .fs-18.lh-1_3.fw-bl= question
+//-                 .position-absolute.top-50.translate-middle-y.end-0.arrow
+//-                     <i class="u_angle-right-b icon fs-24"></i>
+//-         .questions-item-block.spoiler-block
+//-             .px-md-40.px-20.pb-md-40.pb-20
+//-                 block
+//-         span.border-main-br
+//- mixin personal-item(img, name, who)
+//-     .personal-item.d-flex.flex-column.flex-grow-1.rounded-20.p-5.overfow-hidden.pointer
+//-         .row.g-0.flex-grow-1
+//-             .col-sm-12.col-4
+//-                 .ratio.ratio-1x1.overflow-hidden.rounded-15
+//-                     img(src="images/1px.png" data-src="images/personal/personal-"+img+".jpg" alt= who loading="lazy").lazy
+//-             .col-sm-12.col-8.flex-grow-1.d-flex
+//-                 .p-md-30.p-sm-20.p-10.d-flex.flex-column.flex-grow-1
+//-                     .fs-24.fw-bl.lh-1_3.mb-10= name
+//-                     p.fw-rg.lh-1_4.flex-grow-1.mb-10= who
+//-                     .fs-18.lh-1_4.fw-rg.text-decoration-underline.o-1 Связаться
+//- mixin reviews-item(img, name, href, addClass)
+//-     .rounded-20.bg-second_g.p-sm-40.p-20.position-relative.reviews-item.h-100.d-flex.flex-column.align-items-start.flex-grow-1(class= addClass)
+//-         .d-flex.align-items-center.mb-20
+//-             .rounded-circle.reviews-item-ava.overflow-hidden.d-none.d-sm-block                
+//-                 img(src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/reviews/gis_ava.svg" alt="reviews" width="80" href="80").lazy
+//-             .d-flex.flex-column.ms-sm-20
+//-                 .reviews-item-rating.mb-sm-10.mb-5
+//-                     select.star-rating(disabled)                    
+//-                         option(value="5") Excellent
+//-                         option(value="4" selected) Very Good
+//-                         option(value="3") Average
+//-                         option(value="2") Poor
+//-                         option(value="1") Terrible                
+//-                 .fw-bl.fs-18.lh-sm.text-white.mb-sm-10.mb-5= name
+//-                 .d-flex.flex-column.flex-lg-row
+//-                     .fs-12.lh-1.o-0_6.text-white.me-lg-20.mb-10.mb-lg-0 31 августа 2022
+//-                     .fs-12.lh-1.o-0_6.text-white Лебяжье, Полевая, 58г
+//-         .ratio.ratio-21x9.mb-20.rounded-20.overflow-hidden.pointer(data-src="images/reviews/reviews-"+img+".png")
+//-             img(src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/reviews/reviews-"+img+".png", alt="").lazy
+//-         p.lh-base.fs-14.text-white.flex-grow-1.o-0_6
+//-             block
+//-         a(href="#").fs-14.lh-1.text-white.fw-rg.border-bottom.border-1.border-white Ссылка на отзыв
+//- mixin discount-slider(img, name, size, oldPrice, newPrice)
+//-     .discounts-slider.text-center
+//-         .discounts-slider-img.mb-10
+//-             img(src="images/discount/" + img, alt="Скидки").of-contain.mbm-darken
+//-         .discounts-slider-name.mb-10
+//-             .fw-bl.fs-18.lh-sm.mb-5= name
+//-             .fw-bl.fs-14.lh-sm.o-0_7= size
+//-         .discounts-slider-price
+//-             .fw-bl.fs-14.lh-sm.o-0_5.text-decoration-line-through= oldPrice
+//-             .fw-bl.fs-24.lh-sm.text-g= newPrice
+//- mixin conditions-item(name, btn, icon, modal)
+//-     .conditions-item.p-xxl-60.p-md-40.p-20.rounded-20.bg-grey_g.position-relative.border.border-2.border-white
+//-         .d-flex.flex-column.mb-40
+//-             .fs-sm-30.fs-20.fw-bl.mb-40= name
+//-             block
+//-         button.conditions-item-btn.rounded-pill.fs-18.fw-bl.position-relative.border-main.border-0.px-xl-40.py-xl-24.py-20.px-20(data-bs-toggle="modal" data-bs-target=".modal-" +modal)= btn
+//-             <span class="border-main-br"></span>
+//-         .position-absolute.d-flex.end-0.bottom-0.mb-30.me-30.d-none.d-sm-block
+//-             i(class="u_" + icon).icon.fs-100.o-0_2
+//- mixin works-gallery-block
+//-     .border.border-2.border-white.p-xxl-60.p-xl-40.p-sm-30.p-20.works-gallery-block.bg-white.flex-grow-1.d-flex.flex-column
+//-         .fs-sm-30.fs-20.fw-bl.mb-xxl-40.mb-20 Остекление, отделка ПВХ панелями лоджии 6 КВ.М.
+//-         .d-flex.flex-column.flex-grow-1.works-gallery-block-desc.overflow-auto.pe-10
+//-             block
+//-         .d-flex.align-items-xxl-center.flex-column.flex-xxl-row
+//-             button.bg-main_g.px-xxl-40.px-20.py-24.fw-bl.fs-18.rounded-pill.border-0.text-white.me-xxl-30.mb-20.mb-xxl-0(data-bs-toggle="modal" data-bs-target=".modal-calculate") Рассчитать свой вариант
+//-             .d-flex.flex-column
+//-                 .fw-rg.lh-sm.mb-5 Стоимость работ
+//-                 .fw-bl.lh-sm.fs-20.text-g от 99 863 руб.
+//- mixin product-item(name, img, haveAvailability=true, havePrice=true)
+//-     .product-item.rounded-15.p-5.d-flex.flex-column.h-100.bg-white
+//-         .product-item-top.mb-10.mb-sm-0
+//-             .ratio.ratio-1x1.rounded-15.product-item-top-img.d-block.overflow-hidden.pointer.bg-grey(data-src="images/works/" +img data-fancybox="works-gallery")
+//-                 img(src="images/works/" +img, alt=name).mxm-darken
+//-         .product-item-bot.p-xxl-30.p-md-20.p-10.d-flex.flex-column.flex-grow-1
+//-             //- .fs-18.fw-bl.mb-20.flex-grow-1= name
+//-             //- .d-flex.flex-xxl-row.flex-column.align-items-xxl-center.mb-20
+//-                 if havePrice
+//-                     .fw-bl.fs-18.me-xxl-10.text-g.order-1.order-xxl-0 От <span class='fs-24'>10 000</span> руб.
+//-                 else
+//-                     .fw-bl.fs-18.text-g Цена по запросу
+//-             if haveAvailability
+//-                 if havePrice
+//-                     button.conditions-item-btn.rounded-pill.fw-bl.fs-sm-18.position-relative.border-main.border-0.px-xl-30.py-20.px-20.w-100(data-bs-toggle="modal" data-bs-target=".modal-calculate")
+//-                         | Хочу также
+//-                         span.border-main-br
+//-                 else
+//-                     button.rounded-pill.fw-bl.fs-sm-18.position-relative.border-main.border-0.px-xl-30.py-20.px-20.w-100(data-bs-toggle="modal" data-bs-target=".modal-product")
+//-                         | Узнать цену
+//-                         span.border-main-br
+//-             else
+//-                 button.rounded-pill.fw-bl.fs-sm-18.position-relative.border-main.border-0.px-xl-30.py-20.px-20.w-100(data-bs-toggle="modal" data-bs-target=".modal-product")
+//-                     | Уточнить наличие
+//-                     span.border-main-br
+//- mixin profile-tab-item(title, typeArr, imgArr)
+//-     .profile-tab-item.d-flex.flex-column.gap-40
+//-         .row.g-lg-30.g-20
+//-             each img in imgArr
+//-                 .col-sm-3.col-6
+//-                     .profile-tab-item-img.rounded-15.overflow-hidden.bg-grey
+//-                         img.lazy(src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/aluminum/items/"+img+".jpg", alt= title)
+//-         .d-flex.flex-column.align-items-start.gap-20
+//-             .fs-sm-30.fs-20.lh-1.fw-bk
+//-                 | Профиль
+//-                 span.text-g= title
+//-             .row.g-sm-20.g-10
+//-                 each badge in typeArr
+//-                     .col-auto
+//-                         .rounded-10.bg-grey.px-sm-20.px-15.py-sm-15.py-10.d-flex.align-items-center.gap-10
+//-                             i.icon.u_check-circle.fs-sm-20.fs-14.text-g
+//-                             .lh-1.fw-rg.fs-sm-16.fs-14= badge
+//-             .d-flex.flex-column.gap-10
+//-                 block
+//-             button.btn.bg-second_g.d-flex.align-items-center.gap-5.px-20.py-15.rounded-15
+//-                 i.icon.u_file-download.fs-24.text-g.d-none.d-sm-block
+//-                 .lh-1.fw-rg.text-white
+//-                     | Скачать каталог 
+//-                     span= title
+//- mixin works-item(title, img, types, chars)
+//-     .works-item.rounded-15.d-flex.flex-column.overflow-hidden.bg-white.flex-grow-1
+//-         .works-item-img.ratio.ratio-16x9
+//-             img.lazy(src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/works/aworks-"+img+".jpg", alt= title)
+//-         .works-item-block.d-flex.flex-column.gap-xxl-30.gap-md-20.gap-10.p-xxl-30.p-md-20.p-10.flex-grow-1
+//-             .d-flex.flex-column.gap-15.flex-grow-1
+//-                 .fs-14.lh-1_4.fw-bl= title
+//-                 +line(chars)
+//-                 .row.g-10.flex-grow-1
+//-                     each badge in types
+//-                         .col-auto
+//-                             .rounded-10.bg-grey.px-sm-15.px-10.py-sm-10.py-5.fs-sm-14.fs-12.lh-1= badge
+//-             button.bg-main_g.px-md-30.px-20.py-md-20.py-15.fw-bl.rounded-pill.border-0.text-white.fs-14.fs-sm-16(data-bs-toggle="modal" data-bs-target=".modal-consultation ") Консультация специалиста
+

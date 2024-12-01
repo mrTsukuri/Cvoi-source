@@ -1,0 +1,72 @@
+.baner-main {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.baner-main-left .input-block {
+  max-width: 450px;
+}
+.baner-marquee-item {
+  --marqSize: 71px;
+  max-width: var(--marqSize);
+  min-width: var(--marqSize);
+}
+.baner-marquee-item img {
+  max-height: 40px;
+}
+.baner-marquee::before, .baner-marquee::after {
+  content: "";
+  width: 152px;
+  height: 50px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.baner-marquee::before {
+  left: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0) translateY(-50%);
+}
+.baner-marquee::after {
+  right: 0;
+}
+.baner-slider-wrapper {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .baner-marquee-item {
+    --marqSize: 84px;
+  }
+  .baner-main {
+    grid-template-columns: 1fr 435px;
+    gap: 10px;
+  }
+  .baner-slider-wrapper {
+    width: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    transform: unset;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .baner-main {
+    grid-template-columns: 1fr 590px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .baner-main {
+    grid-template-columns: 1fr 720px;
+  }
+  .baner-info-item {
+    min-height: 150px;
+  }
+}

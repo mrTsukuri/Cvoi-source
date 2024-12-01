@@ -1,0 +1,19 @@
+.basket-item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.count-number input {
+  max-width: 60px;
+}
+.count-number input::-webkit-outer-spin-button, .count-number input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+}
+.count-number input {
+  -moz-appearance: textfield;
+}
+
+.basket-tabs-btn {
+  background: #fff;
+}

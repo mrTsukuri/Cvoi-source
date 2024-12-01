@@ -1,0 +1,395 @@
+include ../component/component
+mixin baner
+    section.baner
+        .container
+            .d-flex.flex-column.gap-20.overflow-hidden
+                .swiper.baner-slider.w-100
+                    .swiper-wrapper
+                        -for(let i = 0; i < 3; i++)
+                            .swiper-slide                            
+                                .baner-main.bg-grey.rounded-10
+                                    .baner-main-left.p-xxl-70.p-xl-40.p-sm-30.p-20.d-flex.flex-column.gap-sm-30.gap-10.align-items-start.order-1.order-lg-0
+                                        .d-flex.flex-column.gap-15.align-items-start
+                                            .bg-white.rounded-pill.px-sm-15.py-sm-10.px-10.py-5 
+                                                .text-uppercase.fs-sm-12.fs-10.fw-sb.o-0_6 до конца ноября
+                                            h1.fs-xl-50.fs-lg-40.fs-sm-30.fs-18.lh-0_9.fw-bk.mb-0 <span class='text-g'>Скидка 10%</span> <br class='d-none d-lg-inline'> на ремонт
+                                            p.fs-lg-18.fs-sm-16.fs-12.o-0_6 Оставьте онлайн-заявку, чтобы получить <br class='d-none d-lg-inline'> 10% скидку на ремонт автомобиля
+                                        form(name='baner-form' autocomplete='off').d-flex.input-block.w-100
+                                            label.border-main.position-relative.main-input.bg-white.rounded-start-10.flex-grow-1
+                                                input(type='tel' placeholder='+7 (9__) ___-__-__' required).px-sm-30.px-20.py-sm-20.py-15.rounded-10.fs-sm-14.fs-10.border-0.bg-transparent.input-phone
+                                                span.border-main-br
+                                            button.border-0.bg-main_g.px-md-30.px-sm-20.p-10.py-md-20.py-sm-15.fs-sm-14.fs-10.fw-bl.text-white.text-uppercase.lh-1.flex-grow-1 Оставить заявку
+                                    .baner-main-right.p-10.d-flex.position-relative                                                    
+                                        .ratio.ratio-16x9.rounded-5.h-100.overflow-hidden
+                                            img(src="images/baners-img/mainSlider.jpg", alt="Скидка на ремонт")
+                                        .baner-slider-wrapper.d-flex.gap-10.position-absolute.justify-content-between
+                                            .baner-slider-prev.d-flex.p-5.rounded-10.bg-grey
+                                                i.icon.u_angle-right.fs-30.text-main
+                                            .baner-slider-next.d-flex.p-5.rounded-10.bg-grey
+                                                i.icon.u_angle-right.fs-30.text-main
+                .js_marquee.overflow-hidden.baner-marquee.position-relative
+                    .js_marquee-inner.d-flex.gap-sm-20.gap-8
+                        .baner-marquee-items.d-flex.gap-sm-20.gap-8
+                            each val in ['scania', 'kia', 'lada', 'vw', 'hyndai', 'audi', 'toyo', 'scania', 'kia', 'lada', 'vw', 'hyndai', 'audi', 'toyo']
+                                .baner-marquee-item.rounded-10.bg-grey.p-sm-5.p-2
+                                    +img('images/auto-marks/'+val+'.png', val)
+                .row.g-sm-20.g-15.flex-nowrap.overflow-auto
+                    each val in [{title: '10 лет', desc: 'опыта'}, {title: '50 000', desc: 'постоянных клиентов'}, {title: '24 месяца', desc: 'гарантии на все работы'}, {title: 'свой склад', desc: 'запчастей'}]
+                        .col-lg-3.col-auto
+                            .baner-info-item.rounded-10.bg-grey.p-xxl-40.p-xl-30.px-20.py-15.d-flex.flex-column.justify-content-center.gap-lg-10.gap-sm-5
+                                .fs-xl-24.fs-sm-20.fs-18.fw-bk.text-uppercase.text-g= val['title']
+                                .fs-sm-14.fs-12.fw-rg= val['desc']
+mixin service(form=false)
+    section.service
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-sm-20.mb-10 Услуги автосервиса
+            .row.g-sm-20.g-10
+                each val in [{img: '1', title: 'Диагностика'}, {img: '2', title: 'Техобслуживание'}, {img: '3', title: 'Ремонт'}, {img: '4', title: 'Кузовной ремонт'}, {img: '5', title: 'Прочее'}]
+                    .col-20.col-md-4.col-6.flex-grow-1
+                        a(href="services-category.html").service-item.rounded-10.overflow-hidden.position-relative.bg-grey.d-block
+                            +img('images/service/service-'+val['img']+'.jpg', val['title'])
+                            .service-item-name.position-absolute.bottom-0.start-0.rounded-5.px-10.py-sm-8.p-5.mb-sm-10.ms-sm-10.mb-5.ms-5.overflow-hidden
+                                span.fs-sm-14.fs-12.fw-sb= val['title'] 
+                if form
+                    .col-12
+                        .service-feedback.rounded-10.p-10.bg-grey.mt-30.mt-sm-0                        
+                            .d-flex.flex-column.p-sm-20.p-15.gap-5
+                                .fs-sm-24.fs-18.fw-bl.text-g Оцените стоимость ремонта по фото
+                                p Прикрепите фото автомобиля, и укажите номер телефона, чтобы узнать стоимость ремонта автомобиля
+                            form(name='service-form' autocomplete='off').service-feedback-form.rounded-5.bg-white.p-sm-30.p-20
+                                .row.g-sm-20.g-10
+                                    .col-xxl-auto
+                                        label.input-file.position-relative.d-flex
+                                            span.input-file-text.rounded-start-10.bg-grey.px-20.py-15.flex-grow-1.fs-12.lh-1_25.o-0_7 Выберите фото ...
+                                            input(type='file' accept='image/*').position-absolute.start-0.top-0.w-100.h-100.o-0
+                                            span.input-file-btn.rounded-end-10.border.border-2.border-main.px-20.py-15.fs-12.lh-1_25.fw-rg.pointer Обзор   
+                                    .col-xxl.col-md-6
+                                        input(type='tel' placeholder='+7 (9__) ___-__-__' required).input-phone.rounded-10.bg-grey.px-20.py-15.border-0.fs-14.w-100
+                                    .col-xxl.col-md-6
+                                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Оставить заявку
+mixin repering
+    section.repering
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-sm-20.mb-10.d-none.d-lg-inline-block Наведите на деталь, чтобы <br> узнать стоимость её ремонта
+            .repering-block.position-relative.rounded-10.bg-lg-grey.p-lg-40
+                form(name='repering' autocomplete='off').repering-block-form.d-none.d-lg-flex.flex-column.gap-20
+                    p Прикрепите фото автомобиля, чтобы узнать стоимость ремонта детали вашего авто
+                    label.input-file.position-relative.d-flex
+                        span.input-file-text.rounded-start-10.bg-white.px-20.py-15.flex-grow-1.fs-12.lh-1_25.o-0_7 Выберите фото ...
+                        input(type='file' accept='image/*').position-absolute.start-0.top-0.w-100.h-100.o-0
+                        span.input-file-btn.rounded-end-10.border.border-2.border-main.px-20.py-15.fs-12.lh-1_25.fw-rg.bg-white.pointer Обзор
+                    input(type='tel' placeholder='+7 (9__) ___-__-__' required).input-phone.rounded-10.bg-white.px-20.py-15.border-0.fs-14.w-100
+                    button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100 Оставить заявку
+                .repering-block-img
+                    +img('images/car.png', 'Узнать стоимость ремонта').of-contain
+                    -for(let i = 1; i <= 11; i++)
+                        .repering-block-point.position-absolute(class='point-'+i)
+                            .repering-block-point-item.rounded-circle.p-10.border.border-2.border-main.position-relative.pointer
+                            .repering-block-point-desc.d-flex.flex-column.align-items-center.px-15.py-10.rounded-10.position-absolute
+                                .fs-sm-14.fs-10.fw-rg Название части
+                                .fs-sm-16.fs-10.lh-1_25.fw-bl.text-g.text-uppercase 2 500 ₽
+mixin advantages
+    section.advantages
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20 Преимущества работы с нами
+            -
+                let advArr = [
+                                {title: 'Даем Гарантию <br> до 2 лет', icon: 'shield-exclamation'},
+                                {title: 'Соблюдаем <br> сроки', icon: 'calender'},
+                                {title: 'Делаем дешевле <br> дилера на 20%', icon: 'percentage'},
+                                {title: 'Дарим Скидки <br> и бонусы', icon: 'gift'},
+                                {title: 'Сохраняем <br> заводскую гарантию', icon: 'shield-check'},
+                                {title: 'Сразу Озвучиваем <br> стоимость', icon: 'pricetag-alt'},
+                                {title: 'Присутствуем <br> при ремонте', icon: 'user-check'},
+                                {title: 'Используем <br> Оригинальные детали', icon: 'shutter-alt'},
+                             ]
+            .row.g-md-20.g-10
+                each val in advArr
+                    .col-xl-3.col-4.flex-grow-1.d-flex
+                        .advantages-item.rounded-10.bg-grey.p-xxl-40.p-lg-30.p-sm-20.p-10.d-flex.flex-column.gap-sm-20.gap-10.align-items-center.flex-grow-1
+                            .rounded-circle.p-10.bg-white.d-flex
+                                i.icon.fs-sm-40.fs-20.text-main(class='u_'+val['icon'])
+                            .fs-lg-14.fs-sm-12.fs-10.fw-sb.text-uppercase.text-center!= val['title']
+mixin pop-service(title, href)
+    section.pop-service(class!=attributes.class)
+        .container
+            .d-flex.gap-30.align-items-center.justify-content-between.mb-lg-30.mb-20
+                h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0= title
+                .d-flex.align-items-center.gap-30
+                    a(href="services-catalog.html").fs-md-14.fs-sm-12.fs-10.fw-rg.text-decoration-underline Все услуги
+                    .slider-navigation-4.d-md-flex.d-none.gap-10(data-category='1')
+                        .slider-prev.d-flex.p-5.rounded-10.bg-grey
+                            i.icon.u_angle-right.fs-30.text-main
+                        .slider-next.d-flex.p-5.rounded-10.bg-grey
+                            i.icon.u_angle-right.fs-30.text-main
+            .swiper.slider-4(data-category='1')
+                .swiper-wrapper
+                    each val in [{title: 'Замена масла в двигателе', price: '420', oldPrice: '560 руб.', img: '1'}, {title: 'Замена свечей зажигания', price: '150', oldPrice: '300 руб.', img: '2'}, {title: 'Замер термостата', price: '2 000', oldPrice: '2 500 руб.', img: '3'}, {title: 'Покраска бампера', price: '1 000', oldPrice: '1 500 руб.', img: '4'}, {title: 'Замена масла в двигателе', price: '420', oldPrice: '560 руб.', img: '1'}, {title: 'Замена свечей зажигания', price: '150', oldPrice: '300 руб.', img: '2'}, {title: 'Замер термостата', price: '2 000', oldPrice: '2 500 руб.', img: '3'}, {title: 'Покраска бампера', price: '1 000', oldPrice: '1 500 руб.', img: '4'}]
+                        .swiper-slide.h-auto.d-flex
+                            .pop-service-item.rounded-10.bg-grey.d-flex.flex-column.flex-grow-1.overflow-hidden
+                                a(href= href).pop-service-item-img.d-block.ratio
+                                    +img('images/pop-service/pop-service-'+val['img']+'.jpg', val['title'])
+                                .pop-service-item-desc.flex-grow-1.d-flex.flex-column.gap-sm-20.gap-10.p-md-30.p-20
+                                    .d-flex.flex-column.gap-5
+                                        a(href= href).fs-sm-14.fs-12.fw-sb.text-uppercase= val['title']
+                                        .fs-sm-14.fs-12 Описание услуги
+                                    .d-flex.flex-column.gap-2.flex-grow-1
+                                        .fs-sm-14.fs-12.fw-rg.o-0_6
+                                            |  Цена: 
+                                            span.fw-bl.text-decoration-line-through= val['oldPrice']
+                                        .fs-sm-18.fs-14.fw-bl.text-g.text-uppercase 
+                                            | от  
+                                            span= val['price'] 
+                                            |  руб.
+                                    button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100(data-bs-toggle="modal" data-bs-target=".modal-services-2") Оставить заявку
+mixin news
+    section.news
+        .container
+            .d-flex.gap-30.align-items-center.justify-content-between.mb-lg-30.mb-20
+                h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0 Новости автосервиса
+                .d-flex.align-items-center.gap-30
+                    a(href="#").fs-sm-14.fs-12.fw-rg.text-decoration-underline Все новости
+                    .slider-navigation-4.d-md-flex.d-none.gap-10(data-category='2')
+                        .slider-prev.d-flex.p-5.rounded-10.bg-grey
+                            i.icon.u_angle-right.fs-30.text-main
+                        .slider-next.d-flex.p-5.rounded-10.bg-grey
+                            i.icon.u_angle-right.fs-30.text-main
+            .swiper.slider-4(data-category='2')
+                .swiper-wrapper
+                    -for(let i = 0; i < 8; i++)
+                        .swiper-slide.h-auto.d-flex
+                            a(href="#").news-item.rounded-10.bg-grey.overflow-hidden.flex-grow-1
+                                .news-item-img.pop-service-item-img.d-block.ratio
+                                    +img('images/news/news.jpg', 'Заголовок новости')
+                                .news-item-desc.d-flex.flex-column.gap-sm-20.gap-10.p-md-30.p-20.flex-grow-1
+                                    .fs-sm-14.fs-12.o-0_5 15 декабря 2023
+                                    .d-flex.flex-column.flex-grow-1.gap-5
+                                        .fs-sm-14.fs-12.fw-sb.text-uppercase Заголовок новости
+                                        .fs-sm-14.fs-12 Описание новости
+                                    .fs-sm-14.fs-12.fw-rg.text-main.text-decoration-underline Читать подробнее                                    
+mixin steps
+    section.steps
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20 Порядок работы
+            .row.g-xxl-20.g-10.flex-nowrap.flex-sm-wrap.overflow-auto
+                .col-lg.col-sm-6.col-auto.d-flex
+                    .steps-item.rounded-10.bg-grey.d-flex.flex-column.gap-sm-20.gap-10.p-lg-30.p-20.flex-grow-1
+                        .d-flex.flex-column.gap-5
+                            .fs-sm-18.fs-12.fw-bl.text-uppercase.text-g Шаг 1
+                            .fs-sm-14.fs-12 Вы оставляете заявку
+                        button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.w-100(data-bs-toggle="modal" data-bs-target=".modal-diagnostics") Оставить заявку
+                .col-auto.align-self-center.d-xl-block.d-sm-none.d-block
+                    .rounded-10.bg-grey.p-5.d-flex
+                        i.icon.fs-30.text-main.u_angle-right
+                .col-lg.col-sm-6.col-auto.d-flex
+                    .steps-item.rounded-10.bg-grey.d-flex.flex-column.gap-sm-20.gap-10.p-lg-30.p-20.flex-grow-1
+                        .d-flex.flex-column.gap-5
+                            .fs-sm-18.fs-12.fw-bl.text-uppercase.text-g Шаг 2
+                            .fs-sm-14.fs-12 Мы перезваниваем вам в ближайшее рабочее время по указанному номеру телефона
+                .col-auto.align-self-center.d-xl-block.d-sm-none.d-block
+                    .rounded-10.bg-grey.p-5.d-flex
+                        i.icon.fs-30.text-main.u_angle-right
+                .col-lg.col-sm-6.col-auto.d-flex
+                    .steps-item.rounded-10.bg-grey.d-flex.flex-column.gap-sm-20.gap-10.p-lg-30.p-20.flex-grow-1
+                        .d-flex.flex-column.gap-5
+                            .fs-sm-18.fs-12.fw-bl.text-uppercase.text-g Шаг 3
+                            .fs-sm-14.fs-12 Мы записываем вас на услугу на удобное вам время
+                .col-auto.align-self-center.d-xl-block.d-sm-none.d-block
+                    .rounded-10.bg-grey.p-5.d-flex
+                        i.icon.fs-30.text-main.u_angle-right
+                .col-lg.col-sm-6.col-auto.d-flex
+                    .steps-item.rounded-10.bg-grey.d-flex.flex-column.gap-sm-20.gap-10.p-lg-30.p-20.flex-grow-1
+                        .d-flex.flex-column.gap-5
+                            .fs-sm-18.fs-12.fw-bl.text-uppercase.text-g Шаг 4
+                            .fs-sm-14.fs-12 Наши специалисты выполняют необходиму работу, а вы производите оплату
+mixin versus
+    section.versus.overflow-hidden
+        .container
+            .row.g-xl-30.g-sm-20.g-0.justify-content-center
+                .col-lg
+                    .rounded-10.bg-grey.p-xxl-50.p-sm-30.p-20.d-flex.flex-column.gap-30
+                        .fs-xxl-30.fs-xl-25.fs-sm-20.fs-18.fw-bl.text-g Ремонт в автосервисе «СВОЙ»
+                        .d-flex.flex-column.gap-10
+                            each val in ['Преимущество 1', 'Преимущество 2', 'Преимущество 3']
+                                .d-flex.align-items-center.gap-10
+                                    i.icon.u_check.fs-18.text-main
+                                    .fs-sm-14.fs-12.fw-sb= val
+                .col-auto.align-self-center
+                    .versus-center.fs-50.fw-bk.text-g.text-uppercase VS
+                .col-lg
+                    .rounded-10.bg-grey.p-xxl-50.p-sm-30.p-20.d-flex.flex-column.gap-30
+                        .fs-xxl-30.fs-xl-25.fs-sm-20.fs-18.fw-bl.text-g Ремонт у дилера
+                        .d-flex.flex-column.gap-10
+                            each val in ['Преимущество 1', 'Преимущество 2', 'Преимущество 3']
+                                .d-flex.align-items-center.gap-10
+                                    i.icon.u_ban.fs-18.text-brown
+                                    .fs-sm-14.fs-12.fw-sb= val
+mixin booking
+    section.booking.overflow-hidden
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20 Запишитесь онлайн
+            .row.g-xxl-30.g-md-20.g-10.flex-nowrap.flex-md-wrap.overflow-auto
+                each val in [{title: 'Записаться на ремонт', img: '1'}, {title: 'Записаться на обслуживание', img: '2'}, {title: 'Записаться на диагностику', img: '3'}, {title: 'Записаться на консультацию', img: '4'}]
+                    .col-xl-3.col-lg-4.col-md-6.col-auto.d-flex
+                        .booking-item.pointer.rounded-10.d-flex.flex-column.bg-grey.overflow-hidden.flex-grow-1(data-bs-toggle="modal" data-bs-target=".modal-diagnostics")
+                            .booking-item-img.pop-service-item-img.ratio
+                                +img('images/booking/booking-'+val['img']+'.jpg', val['title'])
+                            .d-flex.justify-content-center.p-xl-30.p-20.bg-main_g.flex-grow-1
+                                .fs-12.lh-1_25.fw-bl.text-uppercase.text-white= val['title']    
+mixin gallery
+    section.gallery
+        .container
+            .d-flex.align-items-center.justify-content-between.gap-30.mb-lg-30.mb-20
+                h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0 Фотогалерея
+                a(href="#").fs-md-14.fs-sm-12.fs-10.fw-rg.text-decoration-underline Все фото    
+            .gallery-grid
+                each val in [{img: '1', class: 'c-2'}, {img: '2'}, {img: '3'}, {img: '4'}, {img: '5', class: 'r-2'}, {img: '6', class: 'r-2'}, {img: '7'}, {img: '8', class: 'c-2'}]
+                    .gallery-grid-item.rounded-10.overflow-hidden.pointer(data-fancybox='gallery' data-src='images/gallery/gallery-'+val['img']+'.png' class= val['class'])
+                        +img('images/gallery/gallery-'+val['img']+'.jpg', 'фотогалерея')
+mixin about
+    section.about
+        .container
+            .about-block.rounded-20.bg-grey.overflow-hidden
+                .about-desc.d-flex.flex-column.p-xl-30.p-sm-20.p-10.gap-10
+                    .about-desc-block.rounded-20.bg-white.p-xl-40.p-sm-30.p-20.d-flex.flex-column.gap-xl-30.gap-20
+                        .content.order-1.order-lg-0
+                            p Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия.
+                            p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+                        h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0 О автосервисе «СВОЙ»
+                        .row.g-sm-20.g-10.order-1
+                            -for(let i = 0; i < 2; i++)
+                                .col-md-6.col-auto
+                                    a(href="#").d-flex.rounded-10.bg-grey.p-sm-20.p-10.align-items-center.justify-content-center.gap-10
+                                        i.icon.u_file-download.fs-34.text-main
+                                        .fs-sm-14.fs-12.fw-rg Сертификат <br> авторизованного центра
+                .about-video.position-relative.pointer(data-fancybox data-src='images/about.jpg')
+                    .ratio.ratio-16x9.h-100
+                        +img('images/about.jpg', 'О автосервисе «СВОЙ»')
+                    .about-video-btn.position-absolute.rounded-circle.d-flex
+                        i.u_play.text-white.fs-40.bg-main.p-20.rounded-circle
+mixin contact
+    section.contact.overflow-hidden
+        .container
+            .d-flex.align-items-center.justify-content-between.gap-30.mb-lg-30.mb-20
+                h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0 Контакты
+                a(href="contact.html").fs-md-14.fs-sm-12.fs-10.fw-rg.text-decoration-underline Перейти на страницу с контактами
+            .contact-block
+                .row.g-xl-30.g-sm-20.g-5
+                    .col-lg-4.d-flex
+                        .contact-block-address.rounded-10.border.border-2.border-grey.d-flex.flex-lg-column.overflow-auto.align-items-center.align-items-lg-stretch.flex-grow-1
+                            each val in [{address: 'Строителей, 143', type: 'Офис', x: '53.339468', y: '83.742047', category: '1'}, {address: 'Строителей, 144', type: 'Кузовной цех', x: '53.338989', y: '83.741598', category: '2'}, {address: 'Пушкина, 48Б', type: 'Механический цех', x: '53.332994', y: '83.791265', category: '3'}]
+                                .map-address.js_office_coordinates.contact-block-address-item.p-xl-30.p-lg-20.p-10.d-flex.gap-15.align-items-center.pointer.flex-grow-1.text-nowrap(data-latitude= val['x'] data-longitude= val['y'] data-category= val['category'])
+                                    i.rounded-circle.p-md-10.p-5.bg-white.d-flex.u_map-marker-alt.fs-lg-24.fs-sm-18.fs-14
+                                    .d-flex.flex-column.gap-sm-5
+                                        .fs-sm-16.fs-12.fw-sb.lh-1_25= val['address']
+                                        .fs-sm-14.fs-12= val['type']
+                    .col-lg-8.d-flex
+                        .contact-block-map.flex-grow-1.rounded-10.border.border-2.border-grey.overflow-hidden
+                            #YaMaps.h-100
+mixin reviews
+    section.reviews
+        .container
+            .d-flex.gap-30.align-items-center.justify-content-between.mb-lg-30.mb-20
+                h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0 Отзывы наших клиентов
+                .d-flex.align-items-center.gap-30
+                    a(href="#").fs-md-14.fs-sm-12.fs-10.fw-rg.text-decoration-underline Оставить отзыв
+                    .slider-navigation-2.d-md-flex.d-none.gap-10(data-category='1')
+                        .slider-prev.d-flex.p-5.rounded-10.bg-grey
+                            i.icon.u_angle-right.fs-30.text-main
+                        .slider-next.d-flex.p-5.rounded-10.bg-grey
+                            i.icon.u_angle-right.fs-30.text-main
+            .swiper.slider-2(data-category='1')
+                .swiper-wrapper
+                    each val in [{name: 'Иванов Иван', date: '15 января 2021г.', img: '1', text: 'Хороший автосервис. Все прозрачно по ценообразованию, ответственно. В сервисе работают квалифицированные специалисты, которые моментально выявляют ошибки и устраняют их.'}, {name: 'Алексеев Александр', date: '27 июня 2022г.', img: '2', text: 'Очень рад тому, что нашел этот автосервис. Особенно хочу отметить хорошее отношение к клиентам, понимание поставленной задачи, грамотных специалистов.'}, {name: 'Иванов Иван', date: '15 января 2021г.', img: '1', text: 'Хороший автосервис. Все прозрачно по ценообразованию, ответственно. В сервисе работают квалифицированные специалисты, которые моментально выявляют ошибки и устраняют их.'}, {name: 'Алексеев Александр', date: '27 июня 2022г.', img: '2', text: 'Очень рад тому, что нашел этот автосервис. Особенно хочу отметить хорошее отношение к клиентам, понимание поставленной задачи, грамотных специалистов.'}]
+                        .swiper-slide.d-flex.h-auto
+                            .reviews-item.rounded-10.bg-grey.d-flex.flex-column.position-relative.p-xl-40.p-lg-30.p-20.gap-md-20.gap-10.flex-grow-1
+                                .d-flex.align-items-center.justify-content-between
+                                    .reviews-item-desc.d-flex.gap-md-20.gap-10.align-items-center
+                                        .reviews-item-ava.rounded-circle.ratio.ratio-1x1.overflow-hidden
+                                            +img('images/reviews-ava/reviews-ava-'+val['img']+'.jpg', val['name'])
+                                        .d-flex.flex-column.gap-md-15.gap-5
+                                            .reviews-item-rating
+                                                select.star-rating(disabled)                    
+                                                    option(value="5") Excellent
+                                                    option(value="4" selected) Very Good
+                                                    option(value="3") Average
+                                                    option(value="2") Poor
+                                                    option(value="1") Terrible
+                                            .d-flex.flex-column.gap-2
+                                                .fs-md-14.fs-12.lh-1.fw-rg= val['name']
+                                                .fs-md-14.fs-12.o-0_7= val['date']
+                                    .reviews-item-from
+                                        img(src= start+ "images/2gis.svg", alt="2Гис", width="70", height="30").w-auto                
+                                .content
+                                    p= val['text']                                    
+mixin clients(title, img, alt)
+    section.clients
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20= title
+            .row.g-md-20.g-10.flex-nowrap.flex-md-wrap.overflow-auto
+                -for(let i = 0; i < 5; i++)
+                    .col-20.col-lg-3.col-md-4.col-auto
+                        .clients-item.rounded-10.p-xxl-30.p-md-20.p-10.overflow-hidden.bg-grey.d-flex.justify-content-center
+                            +img('images/'+img+'.png', alt)(width='180' height='40').w-auto.mbm-darken
+mixin team
+    section.team
+        .container
+            h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20 Наша команда
+            .team-grid.overflow-auto
+                -for(let i = 0; i < 8; i++)
+                    .team-item.d-flex.flex-column.gap-20
+                        .team-item-img.pop-service-item-img.ratio.rounded-10.overflow-hidden.bg-grey
+                            +img('images/teams/teams.jpg', 'Иванов Иван')
+                        .d-flex.flex-column.gap-5
+                            .fs-14.fw-sb Иванов Иван
+                            .fs-14.lh-1_6.o-0_7 Главный техник
+                                                                
+mixin seo
+    section.seo
+        .container
+            .rounded-10.bg-grey.p-xxl-60.p-lg-50.p-md-40.p-20.content
+                h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g SEO текст
+                p Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
+                p Таким образом консультация с широким активом требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что рамки и место обучения кадров требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что укрепление и развитие структуры требуют от нас анализа форм развития. Товарищи! дальнейшее развитие различных форм деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития. Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.
+                p Задача организации, в особенности же укрепление и развитие структуры требуют определения и уточнения соответствующий условий активизации. С другой стороны постоянный количественный рост и сфера нашей активности требуют определения и уточнения модели развития.
+mixin breadcrumbs
+    .container
+        .breadcrumbs.pb-md-20.mb-20
+            .breadcrumbs-nav.d-flex.align-items-center.text-nowrap.overflow-auto.gap-5
+                each val in ['Главная', 'Услуги']
+                    a(href="#").d-flex.align-items-center.gap-5
+                        span.fs-12.lh-1_25.o-0_7= val
+                        i.icon.u_angle-right.fs-14.o-0_5
+                span.fs-12.lh-1_25 Услуга        
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+                                                        
+    

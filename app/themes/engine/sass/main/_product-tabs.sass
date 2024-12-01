@@ -1,0 +1,82 @@
+.product-tabs
+    &-btn:not(:last-of-type)
+        margin-right: 10px
+    &-btn
+        background: $second
+        width: 362px
+        border-radius: 4px        
+    &-btn:first-of-type
+        border-radius: 20px 4px 4px 20px
+    &-btn:last-of-type
+        border-radius: 4px 20px 20px 4px
+    &-btn.active
+        background: $main                
+        color: #fff
+    &-item
+        display: grid 
+        grid-template-columns: 100%             
+        grid-gap: 20px
+        &-gallery
+            display: grid           
+            grid-template-columns: 100%                      
+            grid-template-rows: auto
+            grid-gap: 20px
+            & .ratio
+                --bs-aspect-ratio: calc(9 / 21 * 100% )
+.production-block
+    display: grid
+    grid-template-columns: 100%
+    grid-gap: 0
+    grid-template-areas: "head" "slider" "desc"
+    & .additional-block
+        & img
+            width: 80px
+.production-heading
+    grid-area: head
+    &-char
+        &-line:not(:last-of-type)
+            margin-bottom: 5px
+
+.production-desc
+    grid-area: desc
+.product-tabs-item-gallery, .gallery-wrapper  
+    grid-area: slider
+@media screen and ( min-width: 576px )
+    .production-block
+        & .additional-block
+            & img
+                width: 100%                                                                
+@media screen and ( min-width: 1200px )
+    .production-block
+        grid-template-columns: 1fr 1fr
+        grid-gap: 0 40px
+        grid-template-areas: "head head" "desc slider"
+        grid-template-rows: repeat(1,auto) 1fr
+    .production-block.production-block-left
+        grid-template-areas: "head head" "slider desc" 
+        grid-template-rows: repeat(1,auto) 1fr  
+    .product-tabs                               
+        &-item            
+            &-gallery
+                grid-template-columns: 418px 100px
+                grid-template-rows: 418px
+                grid-gap: 20px
+                & .ratio
+                    --bs-aspect-ratio: calc(1 / 1 * 100% )
+            &-gallery.gallery-left
+                grid-template-columns: 100px 418px       
+@media screen and ( min-width: 1538px )
+    .production-block
+        grid-template-columns: 1fr 1fr
+        grid-gap: 0 80px
+        grid-template-areas: "head slider" "desc slider"
+    .production-block.production-block-left
+         grid-template-areas: "slider head" "slider desc"          
+    .product-tabs                                
+        &-item            
+            &-gallery
+                grid-template-columns: 550px 130px
+                grid-template-rows: 580px
+                grid-gap: 20px
+            &-gallery.gallery-left
+                grid-template-columns: 130px 550px     

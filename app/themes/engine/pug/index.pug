@@ -1,0 +1,22 @@
+extends template/main
+
+block variables
+    -var title = "Автосервис СВОЙ"
+block content
+    +baner
+    +service(true)
+    +repering
+    +advantages
+    +pop-service('Популярные услуги', 'services-category.html')
+    +steps
+    +versus
+    +booking
+    +gallery
+    +news
+    +about
+    +contact
+    +reviews
+    +clients('Наши клиенты', 'delovieLine', 'Деловые линии')
+    +team
+    +clients('Наши партнеры', 'G-Energy', 'G-Energy')
+    +seo

@@ -1,0 +1,75 @@
+.service
+    &-item
+        outline: 2px solid transparent
+        & img
+            height: 240px
+        &-name
+            background: $white            
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background: linear-gradient(90deg,#a64929 .01%,#ff7940 62.03%,#a64929 99.99%)
+                opacity: 0
+                transition: .3s
+            & span
+                z-index: 1
+                position: relative
+                color: $black
+                transition: .3s
+        &:hover
+            outline-color: $main
+            & .service-item-name
+                &::before
+                    opacity: 1
+                & span
+                    color: $white    
+    &-feedback
+        display: grid
+        grid-template-columns: 100%       
+        &-form
+            & .input-file
+                --fileW: auto
+                max-width: var(--fileW)
+                min-width: var(--fileW)
+.pop-service
+    &-item
+        &-img
+            height: 150px
+.booking-item
+    --bookingW: 280px          
+    max-width: var(--bookingW)    
+    min-width: var(--bookingW)    
+@media screen and ( min-width: 576px )
+    .pop-service
+        &-item
+            &-img
+                height: 200px                   
+@media screen and ( min-width: 768px )
+    .booking-item
+        --bookingW: unset !important                    
+@media screen and ( min-width: 992px )
+    .service
+        &-item
+            & img
+                height: 350px
+        &-feedback            
+            grid-template-columns: 1fr 1fr
+            gap: 20px        
+@media screen and ( min-width: 1200px )
+    .service
+        &-feedback            
+            grid-template-columns: 525px 1fr            
+@media screen and ( min-width: 1440px )
+    .service
+        &-feedback            
+            gap: 30px
+            &-form
+                & .input-file
+                    --fileW: 300px
+                        
+                

@@ -1,0 +1,41 @@
+.profile-tab
+    &-company
+        & img
+            height: 40px
+            width: auto
+    &-grid
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+    &-btn
+        background: $grey
+        flex: 0 0 auto
+        width: auto
+        & img
+            max-width: 70px    
+            min-width: 70px
+            height: 61px
+        &.active
+            background: $main
+            color: $white
+    &-item
+        &-img
+            & img
+                max-height: 245px
+@media screen and ( min-width: 992px )
+    .profile-tab
+        &-grid        
+            grid-template-columns: 269px 1fr
+            gap: 40px
+@media screen and ( min-width: 1200px )
+    .profile-tab
+        &-grid        
+            grid-template-columns: 269px 1fr
+            gap: 60px
+@media screen and ( min-width: 1538px )
+    .profile-tab
+        &-grid        
+            grid-template-columns: 269px 1fr
+            gap: 80px    
+                  
+                                        

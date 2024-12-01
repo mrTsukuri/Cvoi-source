@@ -1,0 +1,128 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    //url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?2j583v') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  font-display: swap
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;  
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.u_arrow-right {
+  &:before {
+    content: $u_arrow-right; 
+  }
+}
+.u_map-marker-alt {
+  &:before {
+    content: $u_map-marker-alt; 
+  }
+}
+.u_angle-right {
+  &:before {
+    content: $u_angle-right; 
+  }
+}
+.u_ban {
+  &:before {
+    content: $u_ban; 
+  }
+}
+.u_bars {
+  &:before {
+    content: $u_bars; 
+  }
+}
+.u_calender {
+  &:before {
+    content: $u_calender; 
+  }
+}
+.u_check {
+  &:before {
+    content: $u_check; 
+  }
+}
+.u_file-bookmark-alt {
+  &:before {
+    content: $u_file-bookmark-alt; 
+  }
+}
+.u_file-download {
+  &:before {
+    content: $u_file-download; 
+  }
+}
+.u_gift {
+  &:before {
+    content: $u_gift; 
+  }
+}
+.u_heart {
+  &:before {
+    content: $u_heart; 
+  }
+}
+.u_map-marker-question {
+  &:before {
+    content: $u_map-marker-question; 
+  }
+}
+.u_multiply {
+  &:before {
+    content: $u_multiply; 
+  }
+}
+.u_percentage {
+  &:before {
+    content: $u_percentage; 
+  }
+}
+.u_play {
+  &:before {
+    content: $u_play; 
+  }
+}
+.u_pricetag-alt {
+  &:before {
+    content: $u_pricetag-alt; 
+  }
+}
+.u_shield-check {
+  &:before {
+    content: $u_shield-check; 
+  }
+}
+.u_shield-exclamation {
+  &:before {
+    content: $u_shield-exclamation; 
+  }
+}
+.u_shutter-alt {
+  &:before {
+    content: $u_shutter-alt; 
+  }
+}
+.u_user-check {
+  &:before {
+    content: $u_user-check; 
+  }
+}
+

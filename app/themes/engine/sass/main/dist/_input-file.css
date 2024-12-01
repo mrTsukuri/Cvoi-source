@@ -1,0 +1,7 @@
+.input-file input {
+  z-index: -1;
+}
+.input-file-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,47 @@
+.footer
+    &-logo
+        & img
+            height: 40px    
+    &-mid
+        & ul li:not(:last-of-type)
+            margin-bottom: 5px
+        &-store
+            & img
+                height: 40px
+        &-payment
+            & img
+                height: 40px
+    &-sticky
+        position: sticky
+        bottom: 0
+        width: 100%
+        z-index: 10
+        & img
+            height: 25px
+
+@media screen and ( min-width: 768px )
+    .footer   
+        &-mid
+            & ul li:not(:last-of-type)
+                margin-bottom: 10px                                      
+@media screen and ( min-width: 1200px )
+    .footer
+        &-logo
+            & img
+                height: 50px
+        &-mid
+            &-store
+                & img
+                    height: 50px
+            &-payment
+                & img
+                    height: 45px               
+@media screen and ( min-width: 1440px )
+    .footer
+        &-mid
+            &-store
+                & img
+                    height: 65px
+
+                       
+                               

@@ -1,0 +1,10 @@
+@media screen and (min-width: 992px) {
+  .error .baner-main {
+    grid-template-columns: 1fr 425px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .error .baner-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}

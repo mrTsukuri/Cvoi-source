@@ -1,0 +1,93 @@
+.product
+    &-main
+        &-left
+            & .product-photo
+                & .ratio
+                    &::before
+                        background: linear-gradient(118.43deg, rgba(242, 131, 121, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF
+                    & img
+                        mix-blend-mode: darken
+            & .product-slide-thumbs
+                & .swiper-slide
+                    border: 2px solid #FCF6F5
+                & .swiper-slide-thumb-active
+                    border-color: #F2B679
+            & .product-slide-prev, .product-slide-next
+                background: #F2B679                
+                border-radius: 20px 0px 0px 0px
+                z-index: 1
+                cursor: pointer
+                & i
+                    color: #fff    
+            & .product-slide-prev
+                border-radius: 0px 20px 0px 0px
+                & i
+                    transform: rotate(180deg)
+            & .product-slide-prev.swiper-button-disabled, .product-slide-next.swiper-button-disabled
+                background: #FCF6F5
+                & i
+                    color: #F2B679
+            &-consultation
+                & .ratio
+                    &::before                        
+                        background: linear-gradient(118.43deg, rgba(242, 131, 121, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF
+                    & img
+                        mix-blend-mode: darken
+        &-right
+            &-heading
+                &-item:not(:last-of-type)
+                    padding-right: 15px
+                    margin-right: 10px
+                    &::after
+                        content: ''
+                        position: absolute
+                        right: 0
+                        display: block
+                        width: 5px
+                        height: 5px
+                        border-radius: 50px
+                        background: $main
+                        opacity: 0.5
+                        top: 50%
+                        transform: translateY(-50%)
+            &-filter
+                &-item:not(:last-of-type)
+                    margin-bottom: 30px
+            &-price
+                &-cost
+                    &-bot
+                        border-radius: 12px
+                        background: rgba(242, 131, 121, 0.1)                    
+    &-tabs
+        &-content
+            &-characteristic-line:not(:last-of-type)
+                margin-bottom: 10px        
+            &-characteristic-line            
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    border-bottom: 1px dashed #4D2D26
+                    opacity: 0.1
+                    top: 50%
+                    transform: translateY(-50%)
+                & > span:first-of-type
+                    padding-right: 10px
+                    color: #c6bcba
+                & > span:last-of-type
+                    padding-left: 10px
+                    text-align: end   
+                & span
+                    z-index: 1
+                    & span                     
+                        background: #fff
+                        box-decoration-break: slice                                
+@media screen and ( min-width: 992px )
+    .product-tabs-content-map
+        &-address, &-block
+            max-height: 560px
+                                                               
+
+
+
+                

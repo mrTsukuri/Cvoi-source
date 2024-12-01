@@ -1,0 +1,39 @@
+.product-main-left .product-slide .ratio::before {
+  background: linear-gradient(118.43deg, rgba(242, 131, 121, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+}
+.product-main-left .product-slide .ratio img {
+  mix-blend-mode: darken;
+}
+.product-main-left .product-slide-thumbs .swiper-slide {
+  border: 2px solid #FCF6F5;
+}
+.product-main-left .product-slide-thumbs .swiper-slide-thumb-active {
+  border-color: #F2B679;
+}
+.product-main-left .product-slide-prev, .product-main-left .product-slide-next {
+  background: #F2B679;
+  border-radius: 20px 0px 0px 0px;
+  z-index: 1;
+  cursor: pointer;
+}
+.product-main-left .product-slide-prev i, .product-main-left .product-slide-next i {
+  color: #fff;
+}
+.product-main-left .product-slide-prev {
+  border-radius: 0px 20px 0px 0px;
+}
+.product-main-left .product-slide-prev i {
+  transform: rotate(180deg);
+}
+.product-main-left .product-slide-prev.swiper-button-disabled, .product-main-left .product-slide-next.swiper-button-disabled {
+  background: #FCF6F5;
+}
+.product-main-left .product-slide-prev.swiper-button-disabled i, .product-main-left .product-slide-next.swiper-button-disabled i {
+  color: #F2B679;
+}
+.product-main-left-consultation .ratio::before {
+  background: linear-gradient(118.43deg, rgba(242, 131, 121, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+}
+.product-main-left-consultation .ratio img {
+  mix-blend-mode: darken;
+}

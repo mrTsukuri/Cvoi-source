@@ -1,0 +1,28 @@
+.modal
+    &-content
+        border-radius: 10px
+        background: $grey
+        padding: 20px
+        position: relative
+        overflow: hidden
+        border: none
+    &-header        
+        margin-bottom: 20px
+        border: none
+        & .btn-close
+            top: 10px
+            right: 10px
+    &-body, &-header
+        padding: 0
+    &-body
+        display: flex
+        flex-direction: column
+        gap: 20px
+        & img
+            height: 200px
+            border-radius: 10px
+@media screen and ( min-width: 576px )
+    .modal
+        &-content
+            padding: 40px   
+                          

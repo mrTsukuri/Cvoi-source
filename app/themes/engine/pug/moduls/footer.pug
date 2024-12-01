@@ -1,0 +1,106 @@
+footer.footer.py-lg-70.py-md-50.py-20.bg-grey.overflow-hidden
+    .container
+        .footer-top.rounded-10.bg-white.p-md-30.p-20.mb-md-40.mb-20
+            .row.g-xl-30.g-20.justify-content-between.align-items-center
+                .col-auto
+                    a(href="index.html").d-block.footer-logo
+                        img(src="images/logo.svg", alt="Автосервис Свой" width='128' height='50')
+                .col-md-auto
+                    .row.g-md-10.g-5
+                        each val in [{title: 'О сервисе', href: 'about'}, {title: 'Услуги', href: 'services-catalog'}, {title: 'Гарантии', href: 'guarantee'}, {title: 'Отзывы', href: 'reviews'}, {title: 'Контакты', href: 'contact'}]
+                            .col-md-auto
+                                a(href= val['href']+'.html').fs-12.lh-1_25.o-0_6= val['title']
+                .col-md-auto                    
+                    .d-flex.gap-10.header-social
+                        each val in [{social: 'vk', alt: 'Ссылка на Вконтакт'}, {social: 'wa', alt: 'Ссылка на WhatsApp'}, {social: 'tg', alt: 'Ссылка на Telegram'}]
+                            a(href="#").d-block
+                                img(src="images/"+val['social']+".svg" alt= val['alt'] width='20' height='20')                
+                .col-xl-auto
+                    .row.g-20.justify-content-between
+                        .col-md-auto
+                            .d-flex.flex-column.align-items-md-end
+                                a(href="tel:+73852722222").fw-bl +7 (3852) 72-22-22 
+                                a(href="mailto:director@auto22.pro").fs-12.o-0_6 director@auto22.pro
+                        .col-md-auto
+                            button.border-main.position-relative.px-15.py-12.fw-rg.fs-12.lh-1_25.border-0(data-bs-toggle="modal" data-bs-target=".modal-diagnostics")
+                                span.border-main-br
+                                span Запись на диагностику
+        .footer-mid.mb-md-40.mb-20
+            .row.g-30
+                .col-xxl-5.col-lg-4.col-md-6
+                    .d-flex.flex-column.gap-30
+                        .d-flex.flex-column.flex-xl-row.gap-xl-30.gap-md-10.gap-5
+                            ul.list-unstyled.m-0.p-0
+                                each val in ['Слесарный ремонт', 'Техобслуживание', 'Диагностика', 'Покраска', 'Кондиционеры и отопление']
+                                    li
+                                        a(href="#").fs-sm-14.fs-12= val 
+                            ul.list-unstyled.m-0.p-0
+                                each val in ['Кузовной ремонт', 'Дополнительное оборудование', 'Шиномонтаж', 'Техосмотр с картой диагностики']
+                                    li
+                                        a(href="#").fs-sm-14.fs-12= val
+                        .d-flex.flex-column.gap-20
+                            .fs-13.lh-1_2.fw-sb.d-none.d-xl-block Твой исправный автомобиль в <span class='text-decoration-underline'>мобильном приложении</span> <span class="text-main">Автосервис «СВОЙ»</span>
+                            .d-flex.gap-20
+                                each val in ['AppStore', 'GooglePlay']
+                                    a(href="#").d-block.footer-mid-store
+                                        img(src='images/'+val+'.png', alt= val, width='230', height='65').w-auto
+                .col-xxl-3.col-lg-4.col-md-6
+                    .d-flex.flex-column.gap-30
+                        .d-flex.flex-column.gap-lg-20.gap-10
+                            each val in [{title: 'Механический цех', address: 'Барнаул, ул. Пушкина, 48Б', work: 'Пн-Пт с 9:00 до 18:00'}, {title: 'Кузовной цех', address: 'Барнаул, пр. Строителей, 144', work: 'Пн-Пт с 9:00 до 19:00, Сб с 9:00 до 15:00'}, {title: 'Корпоративным клиентам', address: 'Барнаул, пр. Строителей, 143', work: 'Ежедневно с 09:00 до 20:00'}]
+                                .d-flex.gap-10.align-items-start
+                                    i.icon.u_map-marker-alt.fs-18.o-0_5
+                                    .d-flex.flex-column
+                                        .fs-sm-14.fs-12.fw-sb= val['title']
+                                        .fs-sm-14.fs-12= val['address']
+                                        .fs-sm-14.fs-12.o-0_6= val['work']
+                        .d-flex.gap-5.align-items-center.footer-mid-payment
+                            each val in ['maestro', 'paypal', 'visa', 'mastercard']
+                                img(src='images/'+val+'.png', alt= val, width='77', height='45').w-auto
+                .col-lg-4
+                    .d-flex.flex-column.gap-20.p-xl-30.p-20.bg-white.rounded-10
+                        .fs-14.fw-sb Запишитесь на консультацию или услугу
+                        form(name='footer-form' autocomplete='off').d-flex.flex-column.gap-10
+                            input(type='tel' placeholder='+7 (9__) ___-__-__' required).input-phone.rounded-10.bg-grey.px-sm-30.px-20.py-sm-20.py-15.border-0.fs-sm-14.fs-12.w-100                                                        
+                            .custom-select
+                                select
+                                    each val in ['Диагностика', 'Техобслуживание', 'Слесарный ремонт', 'Покраска', 'Кондиционеры и отопление']                                                       
+                                        option= val
+                            button.rounded-10.bg-main_g.px-sm-30.py-sm-20.px-20.py-15.border-0.fs-sm-14.fs-12.fw-bl.text-uppercase.text-white.w-100 Оставить заявку
+        .footer-bot.content
+            p.o-0_5 Отправляя свои личные данные через формы на сайте, Вы даёте своё согласие на обработку персональных данных согласно Федеральному закону №152-ФЗ «О персональных данных» от 27.07.2006 г. Посещая сайт компании «СВОЙ», вы соглашаетесь с <a href="#" class="text-decoration-underline">Правилами и условиями использования</a> и <a href="#" class="text-decoration-underline">политикой обработки персональных данных</a> данного сайта.
+            p.o-0_5 Права на тексты, фотографии, изображения и иные результаты интеллектуальной деятельности, расположенные на сайте auto22.ru, подлежат правовой охране в соответствии с действующим законодательством РФ, Гражданским кодексом РФ (часть четвертая) от 18.12.2006 № 230-ФЗ. 
+.footer-sticky.d-md-none.bg-grey.border-top.border-2.border-white.py-10
+    .container
+        .d-flex.align-items-center.justify-content-between.gap-20
+            a(href="#mobile-menu").d-flex
+                i.icon.fs-30.u_bars.text-main
+            .d-flex.align-items-center.gap-30
+                a(href="#").d-block
+                    img(src="images/wa.svg" alt='Ссылка на WhatsApp', width='25' height='25').w-auto
+                button.rounded-10.bg-main_g.px-15.py-10.border-0.fs-10.lh-1_25.fw-bl.text-uppercase.text-white(data-bs-toggle="modal" data-bs-target=".modal-diagnostics") Запись на диагностику
+nav#mobile-menu.mobile-menu.menu-scrolling
+    ul                
+        li.sub
+            .d-flex.flex-column.gap-10                
+                each val in [{title: 'Диагностика'}, {title: 'Техобслуживание'}, {title: 'Ремонт'}, {title: 'Кузовной ремонт'}, {title: 'Прочее'}]
+                    a(href="#").d-flex.align-items-center.gap-10.w-100
+                        span.fw-sb.fs-12.p-0.flex-grow-1= val['title']
+                        i.icon.u_angle-right.fs-14
+        li.noSub
+            .d-flex.flex-column.gap-10
+                each val in ['О сервисе', 'Услуги', 'Гарантии', 'Отзывы', 'Контакты']
+                    a(href="#")= val
+        li.noSub
+            .d-flex.flex-column.gap-20.align-items-start
+                .d-flex.flex-column.align-items-center
+                    a(href="tel:+73852723723").fs-12.text-uppercase.fw-sb +7 (3852) 72-37-23
+                    a(href="mailto:director@auto22.pro").fs-10 director@auto22.pro
+                .d-flex.gap-10.header-social
+                    each val in [{social: 'vk', alt: 'Ссылка на Вконтакт'}, {social: 'wa', alt: 'Ссылка на WhatsApp'}, {social: 'tg', alt: 'Ссылка на Telegram'}]
+                        a(href="#").d-block.w-auto
+                            img(src="images/"+val['social']+".svg" alt= val['alt'] width='20' height='20')     
+<div aria-live="polite" aria-atomic="true">
+    <div class="toast-container position-fixed top-0 end-0 p-3 js_toast_container" style="z-index: 10000;"> 
+    </div>
+</div>               

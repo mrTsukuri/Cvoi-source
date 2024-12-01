@@ -1,0 +1,35 @@
+.contact
+    &-block
+        &-address
+            &-item.active
+                background-color: $grey
+                & i
+                    color: $main                
+        &-map
+            height: 200px
+    &-img
+        height: 200px
+    &-payment
+        width: 100px
+        height: 50px
+@media screen and ( min-width: 568px )
+    .contact
+        &-img
+            height: 300px
+        &-block
+            &-map
+                height: 300px    
+@media screen and ( min-width: 1200px )
+    .contact
+        &-img
+            height: 450px    
+        &-block
+            &-map
+                height: auto               
+@media screen and ( min-width: 1440px )
+    .contact
+        &-img
+            height: 500px    
+                       
+               
+

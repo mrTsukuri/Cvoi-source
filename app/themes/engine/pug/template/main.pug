@@ -1,0 +1,34 @@
+doctype html
+
+include ../moduls/sections
+block variables
+
+html(lang='ru-RU')
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="preload", href= start+ "themes/engine/css/boots.css" as="style")
+        link(rel="preload", href= start+ "themes/engine/css/main.css" as="style")
+        link(rel="preload", href= start+ "themes/engine/css/libs.css" as="style")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">        
+        link(rel="stylesheet", href= start+ "themes/engine/css/boots.css")
+        link(rel="stylesheet", href= start+ "themes/engine/css/main.css")
+        link(rel="stylesheet", href= start+ "themes/engine/css/libs.css")       
+        title #{title}
+    body
+        include ../moduls/header
+
+        main
+            block content
+
+        include ../moduls/footer
+        include ../moduls/modals
+        script(defer src= start+ "themes/engine/js/yall.bundle.js")        
+        script(defer src= start+ "themes/engine/js/main.bundle.js")
+        script(defer src= start+ "themes/engine/js/slider.bundle.js")        
+        script(defer src= start+ "themes/engine/js/gallery.bundle.js")
+        script(defer src="https://api-maps.yandex.ru/1.1/index.xml?loadByRequire=1" type="text/javascript")                
+        
+        

@@ -1,0 +1,79 @@
+.custom-select
+    position: relative
+    min-height: 50px
+    & i
+        transition: .3s
+    & select
+        display: none
+    // &-value
+    //     font-weight: 500        
+    //     cursor: pointer
+    & select.is-invalid ~ .custom-select-value
+        border-color: red !important
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E")
+        background-repeat: no-repeat
+        background-position: center right calc(3em + .1875rem)
+        background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+    & select.is-valid ~ .custom-select-value        
+        border-color: green !important
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e")
+        background-repeat: no-repeat
+        background-position: center right calc(3em + .1875rem)
+        background-size: calc(.75em + .375rem) calc(.75em + .375rem)                 
+    &-value        
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        position: relative
+        padding: 15px 20px         
+        background-color: $grey
+        border-radius: 10px
+        font-size: 12px              
+        & i        
+            transition: 0.3s
+            transform: rotate(90deg)            
+        &.active
+            & i
+                transform: rotate(-90deg)    
+    &-result                       
+        text-overflow: ellipsis       
+        white-space: nowrap
+        overflow: hidden
+    &-block
+        display: none
+        box-shadow: 0 4px 20px 0 rgba(242,131,121,.5)
+        z-index: 2
+        position: absolute
+        background-color: #fff
+        top: 100%
+        left: 0
+        width: 100%
+        flex-direction: column
+        max-height: 300px
+        overflow: auto
+        & div
+            font-weight: 500
+            padding: 15px 20px
+            cursor: pointer
+            &:hover
+                background: rgba(248, 248, 248,.5)
+        & div.same-as-selected
+            background: $grey                
+        & label
+            & input
+                display: none
+            &:hover
+                background: rgba(248, 248, 248,.5)         
+            & input:checked ~ span
+                background: $main
+    &-block.active
+        display: flex     
+.custom-select.active    
+    & i
+        transform: rotate(-180deg)
+@media screen and ( min-width: 576px )
+    .custom-select
+        &-value                                                                    
+            padding: 20px 30px                                 
+            font-size: 14px 

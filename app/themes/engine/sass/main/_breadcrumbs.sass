@@ -1,0 +1,18 @@
+.breadcrumbs
+    &-nav
+        &-item:not(.breadcrumbs-nav-item-disabled)
+            
+            padding-right: 15px
+            margin-right: 10px
+            &::after
+                content: ''
+                position: absolute
+                right: 0
+                display: block
+                width: 5px
+                height: 5px
+                border-radius: 50px
+                background: $main
+                opacity: 0.5
+                top: 50%
+                transform: translateY(-50%)

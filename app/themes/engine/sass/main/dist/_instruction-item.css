@@ -1,0 +1,15 @@
+.instruction-item-num {
+  border-radius: 0 0 50px 0;
+  width: 40px;
+  height: 40px;
+}
+.instruction-item-company img {
+  height: 25px;
+}
+
+@media screen and (min-width: 576px) {
+  .instruction-item-num {
+    width: 60px;
+    height: 60px;
+  }
+}

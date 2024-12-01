@@ -1,0 +1,80 @@
+.baner
+    &-main
+        display: grid
+        grid-template-columns: 100%
+        &-left
+            & .input-block
+                max-width: 450px            
+    &-marquee
+        &-item
+            --marqSize: 71px
+            max-width: var(--marqSize)
+            min-width: var(--marqSize)
+            & img
+                max-height: 40px
+        &::before, &::after
+            content: ''
+            width: 152px
+            height: 50px
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)            
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 1
+        &::before
+            left: 0
+            transform: matrix(-1, 0, 0, 1, 0, 0) translateY(-50%)
+        &::after
+            right: 0    
+    &-slider
+        &-wrapper
+            top: 50%            
+            left: 0            
+            transform: translateY(-50%)
+            z-index: 1
+            width: 100%                                
+@media screen and ( min-width: 992px )
+    .baner
+        &-marquee
+            &-item
+                --marqSize: 84px
+        &-main
+            grid-template-columns: 1fr 435px
+            gap: 10px
+        &-slider
+            &-wrapper
+                width: auto      
+                margin-bottom: 20px
+                margin-right: 20px
+                top: auto
+                left: auto
+                bottom: 0
+                right: 0
+                transform: unset
+@media screen and ( min-width: 1200px )
+    .baner
+        &-main
+            grid-template-columns: 1fr 590px   
+@media screen and ( min-width: 1440px )
+    .baner
+        &-main
+            grid-template-columns: 1fr 720px
+        &-info
+            &-item
+                min-height: 150px        
+                                                
+
+
+                     
+
+                                          
+
+            
+
+
+            
+
+    
+                
+                
+        

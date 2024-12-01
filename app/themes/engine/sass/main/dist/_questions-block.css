@@ -1,0 +1,15 @@
+.questions-item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.questions-item {
+  border: 2px solid #FCF6F5;
+}
+.questions-item-btn {
+  background-color: #fff;
+}
+.questions-item:not(.active) {
+  border-color: transparent;
+}
+.questions-item:not(.active) .questions-item-btn {
+  background: #FCF6F5;
+}

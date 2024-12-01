@@ -1,0 +1,231 @@
+@import libs
+@import text-col
+   
+.js-tabs
+    &__content
+        display: none
+    &__content.active
+        display: block
+.mm-ocd     
+    transition-property: bottom   
+    transition-delay: .5s    
+    transition-duration: 0s
+.mm-ocd--open    
+    transition-delay: 0s
+.mm-ocd .mobile-menu
+    display: block!important         
+.mm-ocd__content
+    background: 0 0
+    --mm-ocd-width: 55%   
+.mm-spn.mm-spn--dark 
+    background: #fff
+    color: #000
+    position: relative
+    border-radius: 10px
+    border: 2px solid #A64929   
+    opacity: 1
+.mm-spn.mm-spn--navbar ul
+    top: 0
+.mm-spn.mm-spn--navbar ul:before
+    content: none          
+.mm-spn.mm-spn--navbar:after
+    content: none     
+.mm-spn ul
+    opacity: 1
+    width: 100%
+    padding: 20px
+.mm-spn ul:after
+    content: none      
+.mm-spn ul.mm-spn--parent
+    overflow-y: hidden
+    left: -100%      
+.mm-spn li:after
+    content: none
+.mm-spn li.sub, .mm-spn li.noSub
+    &::before
+        content: none
+.mm-spn li.noSub
+    margin-top: 20px
+    padding-top: 20px
+    position: relative
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+        background: #000
+        opacity: .1
+        position: absolute
+        top: 0
+        left: 0
+        margin-left: 0    
+    & a
+        width: auto                                       
+.mm-spn a
+    padding: 0
+    line-height: 1.25  
+    &:hover
+        color: #ff884d
+.mm-spn a:not(:last-child):after
+    content: none                     
+.baner-slider, .letters-slider, .slider-navigation-4 .slider, .slider-navigation-2 .slider
+    &-next, &-prev
+        cursor: pointer        
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled
+        cursor: default
+        opacity: 0.5
+    &-prev
+        & i
+            transform: rotate(180deg)
+    &-pagination
+        & .swiper-pagination-bullet
+            width: 16px
+            height: 16px            
+            opacity: 1
+            background: transparent
+            &:not(:last-of-type)
+                margin-right: 10px                                       
+.baner-slider
+    &-next, &-prev, &-pagination
+        z-index: 1
+    &-next, &-prev
+        cursor: pointer        
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled
+        cursor: default
+        opacity: 0.5
+    &-prev
+        & i
+            transform: rotate(180deg)
+    &-pagination
+        & .swiper-pagination-bullet            
+            border: 2px solid #fff            
+            background: transparent            
+        & .swiper-pagination-bullet.swiper-pagination-bullet-active
+            background: #fff
+.letters-slider
+    &-pagination
+        & .swiper-pagination-bullet            
+            border: 2px solid #FF884D           
+            background: transparent            
+        & .swiper-pagination-bullet.swiper-pagination-bullet-active
+            background: #FF884D                               
+.works-slide    
+    &-thumbs
+        & .swiper-slide
+            border: 3px solid transparent
+            cursor: pointer
+            &.swiper-slide-thumb-active
+                border: 3px solid #ff6040
+                cursor: default
+                
+.product-slide
+    &-thumbs        
+        & .swiper-slide            
+            opacity: 0.5
+            cursor: pointer
+            &.swiper-slide-thumb-active                                          
+                opacity: 1
+                cursor: default
+        & .ratio
+            cursor: pointer
+    &-next, &-prev
+        cursor: pointer
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled
+        cursor: default
+        opacity: 0.5
+    & .ratio
+        cursor: pointer                
+    &-prev
+        & i
+            transform: rotate(180deg)
+.reviews-slider, .discount-slider, .sertificates-slider, .works-slider, .slider-4
+    &-prev, &-next
+        background: linear-gradient(115.44deg, #FF6040 0%, #FED566 100%)
+        cursor: pointer
+        z-index: 2
+        & i            
+            -webkit-text-fill-color: #fff
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled
+        background: linear-gradient(115.44deg, rgba(255, 96, 64, 0.1) 0%, rgba(254, 213, 102, 0.1) 100%)
+        cursor: default
+        & i
+            background: linear-gradient(115.44deg,#ff6040 0,#fed566 100%)
+            background-clip: text
+            -webkit-text-fill-color: transparent
+    &-pagination
+        & .swiper-pagination-bullet:not(:last-of-type)
+            margin-right: 15px
+        & .swiper-pagination-bullet.swiper-pagination-bullet-active
+            background: linear-gradient(115.44deg,#ff6040 0,#fed566 100%)  
+        & .swiper-pagination-bullet
+            opacity: 1
+            width: 20px
+            height: 20px                        
+            z-index: 0
+            background: transparent
+            position: relative
+            &::before 
+                content: ""
+                position: absolute
+                z-index: -1
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                padding: 2px
+                border-radius: 50px
+                background: linear-gradient(115.44deg,#ff6040 0,#fed566 100%) 
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)                         
+                -webkit-mask-composite: destination-out
+                mask-composite: exclude
+@media screen and ( min-width: 1200px )
+.slider-4
+    & .swiper-slide
+        max-width: 220px
+        margin-right: 10px
+.slider-2
+    & .swiper-slide
+        max-width: 300px
+        margin-right: 10px                                                    
+@media screen and ( min-width: 768px )   
+    .slider-4
+        & .swiper-slide
+            max-width: 338px
+            margin-right: 20px
+    .slider-2
+        & .swiper-slide
+            max-width: 343px                             
+@media screen and ( min-width: 992px )
+    .slider-4
+        & .swiper-slide
+            max-width: 299px
+    .slider-2
+        & .swiper-slide
+            max-width: 463px                                          
+@media screen and ( min-width: 1200px )    
+    .slider-4
+        & .swiper-slide
+            max-width: 264px
+    .slider-2
+        & .swiper-slide
+            max-width: 548px
+            margin-right: 20px                                       
+@media screen and ( min-width: 1440px )    
+    .slider-4
+        & .swiper-slide
+            max-width: 328px
+            margin-right: 30px
+    .slider-2
+        & .swiper-slide
+            max-width: 685px
+            margin-right: 30px    
+                    
+                            
+
+
+                
+                
+                   
+                   
+                                          
+                

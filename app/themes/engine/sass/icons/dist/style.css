@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icons/icomoon.woff") format("woff"), url("../fonts/icons/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  font-display: swap;
+}
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u_gift:before {
+  content: "";
+}
+
+.u_tag-alt:before {
+  content: "";
+}
+
+.u_moneybag:before {
+  content: "";
+}
+
+.u_arrow-up-right:before {
+  content: "";
+}
+
+.u_file-download:before {
+  content: "";
+}
+
+.u_check-circle:before {
+  content: "";
+}
+
+.u_play:before {
+  content: "";
+}
+
+.u_plus-circle:before {
+  content: "";
+}
+
+.u_star:before {
+  content: "";
+}
+
+.u_multiply:before {
+  content: "";
+}
+
+.u_angle-right-b:before {
+  content: "";
+}
+
+.u_map-pin-alt:before {
+  content: "";
+}
+
+.u_phone-volume:before {
+  content: "";
+}
+
+.u_play-circle:before {
+  content: "";
+}
+
+.u_user-circle:before {
+  content: "";
+}

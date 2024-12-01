@@ -1,0 +1,9 @@
+.product-item-top-img::before {
+  background: linear-gradient(118.43deg, rgba(242, 131, 121, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+}
+.product-item-top-img img {
+  mix-blend-mode: darken;
+}
+.product-item-sale {
+  border-radius: 0 20px;
+}

@@ -1,0 +1,44 @@
+extends template/main
+
+block variables
+    -var title = "Отзывы наших клиентов"
+block content
+    +breadcrumbs
+    section.reviews-page
+        .container
+            .d-flex.align-items-center.justify-content-between.gap-30.mb-lg-30.mb-20
+                h1.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0 Отзывы наших клиентов
+                a(href="#").fs-sm-14.fs-12.fw-rg.text-decoration-underline Оставить отзыв
+            .row.g-xxl-30.g-xl-20.g-10
+                -
+                    let revArr = [
+                                    {name: 'Иванов Иван', date: '15 января 2021г.', img: '1', text: 'Хороший автосервис. Все прозрачно по ценообразованию, ответственно. В сервисе работают квалифицированные специалисты, которые моментально выявляют ошибки и устраняют их.'},
+                                    {name: 'Алексеев Александр', date: '27 июня 2022г.', img: '2', text: 'Очень рад тому, что нашел этот автосервис. Особенно хочу отметить хорошее отношение к клиентам, понимание поставленной задачи, грамотных специалистов.'},
+                                    {name: 'Иванов Иван', date: '15 января 2021г.', img: '1', text: 'Хороший автосервис. Все прозрачно по ценообразованию, ответственно. В сервисе работают квалифицированные специалисты, которые моментально выявляют ошибки и устраняют их.'},
+                                    {name: 'Алексеев Александр', date: '27 июня 2022г.', img: '2', text: 'Очень рад тому, что нашел этот автосервис. Особенно хочу отметить хорошее отношение к клиентам, понимание поставленной задачи, грамотных специалистов.'},
+                                    {name: 'Иванов Иван', date: '15 января 2021г.', img: '1', text: 'Хороший автосервис. Все прозрачно по ценообразованию, ответственно. В сервисе работают квалифицированные специалисты, которые моментально выявляют ошибки и устраняют их.'},
+                                ]
+                each val in revArr                        
+                    .col-lg-6    
+                        .reviews-item.rounded-10.bg-grey.d-flex.flex-column.position-relative.p-xl-40.p-lg-30.p-20.gap-md-20.gap-10.flex-grow-1
+                            .d-flex.align-items-center.justify-content-between
+                                .reviews-item-desc.d-flex.gap-md-20.gap-10.align-items-center
+                                    .reviews-item-ava.rounded-circle.ratio.ratio-1x1.overflow-hidden
+                                        +img('images/reviews-ava/reviews-ava-'+val['img']+'.jpg', val['name'])
+                                    .d-flex.flex-column.gap-md-15.gap-5
+                                        .reviews-item-rating
+                                            select.star-rating(disabled)                    
+                                                option(value="5") Excellent
+                                                option(value="4" selected) Very Good
+                                                option(value="3") Average
+                                                option(value="2") Poor
+                                                option(value="1") Terrible
+                                        .d-flex.flex-column.gap-2
+                                            .fs-md-14.fs-12.lh-1.fw-rg= val['name']
+                                            .fs-md-14.fs-12.o-0_7= val['date']
+                                .reviews-item-from
+                                    img(src= start+ "images/2gis.svg", alt="2Гис", width="70", height="30").w-auto                
+                            .content
+                                p= val['text']
+    +advantages
+    +versus                                

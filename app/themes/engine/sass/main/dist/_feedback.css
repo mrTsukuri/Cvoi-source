@@ -1,0 +1,5 @@
+.feedback-grid {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  display: grid;
+  grid-template-columns: 1fr 463px;
+}

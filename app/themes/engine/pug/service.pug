@@ -1,0 +1,38 @@
+extends template/main
+
+block variables
+    -var title = "Замена технических жидкостей"
+block content
+    +breadcrumbs
+    section.service
+        .container
+            .category-grid.noList
+                h1.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0.category-head Замена технических жидкостей
+                .category-str.d-flex.flex-column.gap-20.align-items-lg-start
+                    .d-flex.align-items-center.rounded-10.bg-grey.p-5.gap-sm-30.gap-10.justify-content-between
+                        .d-flex.bg-white.p-5.rounded-5
+                            i.icon.u_shield-check.text-main.fs-sm-40.fs-30
+                        .fs-xl-15.fs-12.lh-1_2.text-uppercase.fw-bl.flex-grow-1.text-center Обслуживаем автомобили <br> <span class='text-g'>по дилерским стандартам</span>
+                        .d-flex.bg-white.p-10.rounded-5
+                            .fs-sm-14.fs-12.fw-bl.text-g.text-center с 2003 <br> года!
+                    button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.d-none.d-lg-block Записаться
+                .category-desc.content                       
+                    ul.fs-lg-16.fs-sm-14.fs-10
+                        each val in ['Замена масла', 'Замена тормозной жидкости', 'Замена охлаждающей жидкости', 'Замена трансмиссионных жидкостей', 'Замена гидравлических жидкостей', 'Промывка инжекторов']
+                            li= val
+                .category-advantages.d-lg-none.d-block
+                    .row.g-10.w-100
+                        each val in [{colW: 'col-xxl-auto col-md d-flex', class: 'min', title: 'до 2 лет гарантии', desc: 'на работы и запчасти'}, {colW: 'col-md d-flex', class: '', title: 'Оплата за езультат', desc: 'Если мы не решили проблему, вы не оплачиваете работу'}, {colW: 'col-md d-flex', class: '', title: '19 лет безупречной работы', desc: 'Более 25 000 клиентов в Барнауле'}]                                
+                            div(class= val['colW'])                                
+                                .category-advantages-item.rounded-10.bg-grey.d-flex.flex-column.p-md-20.p-10.gap-5.flex-grow-1(class= val['class'])
+                                    .fs-md-14.fs-sm-12.fs-10.fw-bk.text-g.text-uppercase= val['title']
+                                    .fs-md-14.fs-sm-12.fs-10= val['desc']            
+                .category-img
+                    .ratio.rounded-10.overflow-hidden                    
+                        img(src="images/baners-img/tech.jpg", alt="Техобслуживание")    
+    +advantages
+    +service(true)
+    +reviews
+    +steps
+    +booking
+    +seo                        

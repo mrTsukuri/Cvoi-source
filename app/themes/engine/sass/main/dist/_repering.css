@@ -1,0 +1,66 @@
+.repering-block-form {
+  max-width: 350px;
+}
+.repering-block-img {
+  bottom: 10px;
+  right: 50px;
+}
+.repering-block-img img {
+  width: 804px;
+  height: 438px;
+}
+.repering-block-point {
+  width: 40px;
+  height: 40px;
+}
+.repering-block-point::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+}
+.repering-block-point-desc {
+  opacity: 0;
+}
+.repering-block-point.point-1 {
+  top: 10px;
+  left: 10px;
+}
+.repering-block-point.point-2 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-3 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-4 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-5 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-6 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-7 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-8 {
+  top: 0;
+  left: 0;
+}
+.repering-block-point.point-9 {
+  top: 0;
+  left: 0;
+}

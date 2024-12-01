@@ -1,0 +1,11 @@
+.steps-item {
+  --stepsW: 220px;
+  max-width: var(--stepsW);
+  min-width: var(--stepsW);
+}
+
+@media screen and (min-width: 576px) {
+  .steps-item {
+    --stepsW: unset !important;
+  }
+}

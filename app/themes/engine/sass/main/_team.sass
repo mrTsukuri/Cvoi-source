@@ -1,0 +1,22 @@
+.team    
+    &-grid                   
+        display: grid
+        grid-template-columns: repeat(4, 250px)
+        gap: 10px
+@media screen and ( min-width: 768px )
+    .team
+        &-grid            
+            grid-template-columns: repeat(3, 1fr)
+@media screen and ( min-width: 992px )
+    .team
+        &-grid
+            gap: 20px                                                       
+@media screen and ( min-width: 1200px )
+    .team
+        &-grid                       
+            grid-template-columns: repeat(4, 1fr)                                      
+@media screen and ( min-width: 1424px )
+    .team
+        &-grid            
+            gap: 30px             
+            

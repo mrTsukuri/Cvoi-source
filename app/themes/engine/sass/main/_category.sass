@@ -1,0 +1,56 @@
+.category
+    &-grid
+        display: grid
+        grid-template-columns: 100%
+        grid-template-areas: 'head' 'img' 'str' 'list' 'desc' 'advantages'
+        gap: 20px
+        &.noList
+            grid-template-areas: 'head' 'img' 'str' 'desc' 'advantages'
+    &-head
+        grid-area: head    
+    &-str
+        grid-area: str
+    &-list
+        grid-area: list
+    &-desc
+        grid-area: desc
+    &-img
+        grid-area: img
+        & .ratio
+            aspect-ratio: 21 / 9        
+    &-advantages
+        grid-area: advantages 
+        &-item.min
+            width: auto
+@media screen and ( min-width: 992px )
+    .category
+        &-grid
+            grid-template-columns: 1fr 1fr
+            gap: 20px 30px
+            grid-template-areas: 'head head' 'str img' 'desc img' 'advantages advantages'
+            &.noList
+                grid-template-areas: 'head head' 'str img' 'desc img' 'advantages advantages'
+        &-img
+            & .ratio
+                aspect-ratio: 3 / 2    
+@media screen and ( min-width: 1200px )
+    .category
+        &-grid            
+            grid-template-areas: 'head img' 'str img' 'desc img' 'advantages advantages'
+            &.noList
+                grid-template-areas: 'head img' 'str img' 'desc img' 'advantages advantages'
+@media screen and ( min-width: 1440px )
+    .category
+        &-grid
+            grid-template-areas: 'head img' 'str img' 'desc img' 'advantages img'
+            &.noList
+                grid-template-areas: 'head img' 'str img' 'desc img' 'advantages img'
+        &-advantages             
+            &-item.min
+                width: 150px    
+
+                
+                                         
+            
+                
+                    

@@ -1,0 +1,23 @@
+.reviews-item-ava {
+  width: 50px;
+}
+.reviews-item-rating select {
+  opacity: 0;
+}
+.reviews-item-from img {
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-item-ava {
+    width: 80px;
+  }
+  .reviews-item-from {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .reviews-item-from img {
+    height: 30px;
+  }
+}

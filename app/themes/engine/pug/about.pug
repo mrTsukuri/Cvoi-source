@@ -1,0 +1,38 @@
+extends template/main
+
+block variables
+    -var title = "О автосервисе «СВОЙ»"
+block content
+    +breadcrumbs
+    section.about
+        .container
+            .row.g-30.mb-20
+                .col-xxl-6.col-lg-7
+                    h2.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-lg-30.mb-20 О автосервисе «СВОЙ»
+                    .content.mb-lg-30.mb-20                       
+                        p Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия.
+                        p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+                        p Равным образом новая модель организационной деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+                    .d-flex.flex-column.flex-md-row.gap-sm-20.gap-10.align-items-start
+                        -for(let i = 0; i < 2; i++)
+                            a(href="#").d-flex.rounded-10.bg-grey.p-sm-20.p-10.align-items-center.justify-content-center.gap-10
+                                i.icon.u_file-download.fs-34.text-main
+                                .fs-sm-14.fs-12.fw-rg Сертификат <br> авторизованного центра
+                .col-xxl-6.col-lg-5
+                    .ratio.ratio-16x9.rounded-10.overflow-hidden                    
+                        img(src="images/baners-img/about.jpg", alt="О автосервисе «СВОЙ»")
+            .row.g-sm-20.g-15.flex-nowrap.overflow-auto
+                each val in [{title: '10 лет', desc: 'опыта'}, {title: '50 000', desc: 'постоянных клиентов'}, {title: '24 месяца', desc: 'гарантии на все работы'}, {title: 'свой склад', desc: 'запчастей'}]
+                    .col-lg-3.col-auto
+                        .baner-info-item.rounded-10.bg-grey.p-xxl-40.p-xl-30.px-20.py-15.d-flex.flex-column.justify-content-center.gap-lg-10.gap-sm-5
+                            .fs-xl-24.fs-sm-20.fs-18.fw-bk.text-uppercase.text-g= val['title']
+                            .fs-sm-14.fs-12.fw-rg= val['desc']                
+    +advantages
+    +clients('Наши партнеры', 'G-Energy', 'G-Energy')
+    +booking
+    +clients('Наши клиенты', 'delovieLine', 'Деловые линии')
+    +reviews
+    +steps
+    +seo
+    +team
+                        

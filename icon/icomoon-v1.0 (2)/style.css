@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?rtcczu');
+  src:  url('fonts/icomoon.eot?rtcczu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rtcczu') format('truetype'),
+    url('fonts/icomoon.woff?rtcczu') format('woff'),
+    url('fonts/icomoon.svg?rtcczu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u_arrow-right:before {
+  content: "\e913";
+}
+.u_map-marker-alt:before {
+  content: "\e912";
+}
+.u_angle-right:before {
+  content: "\e900";
+}
+.u_ban:before {
+  content: "\e901";
+}
+.u_bars:before {
+  content: "\e902";
+}
+.u_calender:before {
+  content: "\e903";
+}
+.u_check:before {
+  content: "\e904";
+}
+.u_file-bookmark-alt:before {
+  content: "\e905";
+}
+.u_file-download:before {
+  content: "\e906";
+}
+.u_gift:before {
+  content: "\e907";
+}
+.u_heart:before {
+  content: "\e908";
+}
+.u_map-marker-question:before {
+  content: "\e909";
+}
+.u_multiply:before {
+  content: "\e90a";
+}
+.u_percentage:before {
+  content: "\e90b";
+}
+.u_play:before {
+  content: "\e90c";
+}
+.u_pricetag-alt:before {
+  content: "\e90d";
+}
+.u_shield-check:before {
+  content: "\e90e";
+}
+.u_shield-exclamation:before {
+  content: "\e90f";
+}
+.u_shutter-alt:before {
+  content: "\e910";
+}
+.u_user-check:before {
+  content: "\e911";
+}

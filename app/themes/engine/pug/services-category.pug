@@ -1,0 +1,41 @@
+extends template/main
+
+block variables
+    -var title = "Техобслуживание"
+block content
+    +breadcrumbs
+    section.category
+        .container
+            .category-grid                                  
+                h1.fs-lg-30.fs-sm-20.fs-18.fw-bl.text-g.mb-0.category-head Техобслуживание
+                .category-str.d-flex.flex-column.gap-20.align-items-lg-start
+                    .d-flex.align-items-center.rounded-10.bg-grey.p-5.gap-sm-30.gap-10.justify-content-between
+                        .d-flex.bg-white.p-5.rounded-5
+                            i.icon.u_shield-check.text-main.fs-sm-40.fs-30
+                        .fs-xl-15.fs-12.lh-1_2.text-uppercase.fw-bl.flex-grow-1.text-center Обслуживаем автомобили <br> <span class='text-g'>по дилерским стандартам</span>
+                        .d-flex.bg-white.p-10.rounded-5
+                            .fs-sm-14.fs-12.fw-bl.text-g.text-center с 2003 <br> года!
+                    button.rounded-10.bg-main_g.px-20.py-15.border-0.fs-12.lh-1_25.fw-bl.text-uppercase.text-white.d-none.d-lg-block Узнать стоимость
+                .category-list.d-md-none.d-flex.flex-column.gap-5
+                    each val in ['Замена технических жидкостей', 'Замена фильтров', 'Обслуживание тормозной системы', 'Регламентные работы', 'Геометрия подвески', 'Промывка инжекторов']
+                        a(href="service.html").d-flex.align-items-center.justify-content-between.px-15.py-10.rounded-10.bg-grey.gap-10
+                            span.fs-10.fs-sm-12.fw-rg= val
+                            i.icon.u_arrow-right.fs-18.text-main
+                .category-desc.d-none.d-md-block.content                       
+                    p.fs-16 Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
+                .category-advantages
+                    .row.g-10.w-100
+                        each val in [{colW: 'col-xxl-auto col-md d-flex', class: 'min', title: 'до 2 лет гарантии', desc: 'на работы и запчасти'}, {colW: 'col-md d-flex', class: '', title: 'Оплата за езультат', desc: 'Если мы не решили проблему, вы не оплачиваете работу'}, {colW: 'col-md d-flex', class: '', title: '19 лет безупречной работы', desc: 'Более 25 000 клиентов в Барнауле'}]                                
+                            div(class= val['colW'])                                
+                                .category-advantages-item.rounded-10.bg-grey.d-flex.flex-column.p-md-20.p-10.gap-5.flex-grow-1(class= val['class'])
+                                    .fs-md-14.fs-sm-12.fs-10.fw-bk.text-g.text-uppercase= val['title']
+                                    .fs-md-14.fs-sm-12.fs-10= val['desc']
+                .category-img
+                    .ratio.rounded-10.overflow-hidden                    
+                        img(src="images/baners-img/tech.jpg", alt="Техобслуживание")
+    +pop-service('Услуги этой категории', 'service.html')(class='d-none d-md-block')
+    +advantages
+    +reviews
+    +steps
+    +booking
+    +seo                        
